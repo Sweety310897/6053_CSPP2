@@ -12,10 +12,13 @@ public class Solution {
         int count = 0;
         int i;
         int temp = 1;
-        for(i = 0;i<=n;i++){
+        for(i = 0;i<=n;i++)
+        {
         	temp = i;
-        	while(temp!=i){
-        		if(temp%10 == 7){
+        	while(temp != 0)
+        	{
+        		if(temp%10 == 7)
+        		{
         			count++;
         		}
         		temp = temp/10;
