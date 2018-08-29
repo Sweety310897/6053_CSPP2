@@ -1,17 +1,17 @@
 import java.util.Scanner;
 /*
-	Do not modify this main function.
-	*/
+    Do not modify this main function.
+    */
 /**
  * Class for solution.
  */
 final public class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	private Solution() {
-		//constructor is used.
-	}
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //constructor is used.
+    }
 /* Fill the main function to print the number of 7's between 1 to n*/
     /**
      * { function_description }.
@@ -27,14 +27,14 @@ final public class Solution {
         final int x = 10;
         final int y = 7;
         for (i = 0; i <= n; i++) {
-        	temp = i;
-        	while (temp != 0) {
-        		if (temp % x == y) {
-        			count++;
-        		}
-        		temp = temp / x;
+            temp = i;
+            while (temp != 0) {
+                if (temp % x == y) {
+                    count++;
+                }
+                temp = temp / x;
 
-        	}
+            }
 
         }
         System.out.println(count);
