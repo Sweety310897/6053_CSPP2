@@ -14,7 +14,7 @@ public class Solution {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
@@ -29,7 +29,7 @@ public class Solution {
 	Need to write the gcd function and print the output.
 	*/
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      n1    The n 1
      * @param      n2    The n 2
