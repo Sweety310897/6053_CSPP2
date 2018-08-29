@@ -11,8 +11,9 @@ public class Solution {
         int n = s.nextInt();
         int count = 0;
         int i;
+        int temp = 1;
         for(i = 0;i<=n;i++){
-        	int temp = i;
+        	temp = i;
         	while(temp!=i){
         		if(temp%10 == 7){
         			count++;
