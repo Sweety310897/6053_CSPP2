@@ -8,8 +8,8 @@ public class Solution {
     public static void main(String[] args) {
 
         Scanner s=new Scanner(System.in);      
-        long n = s.nextInt();
-        long count = 0;
+        double n = s.nextInt();
+        double count = 0;
         int i;
         for(i = 0;i<n;i++){
         	if(i%10 == 7){
