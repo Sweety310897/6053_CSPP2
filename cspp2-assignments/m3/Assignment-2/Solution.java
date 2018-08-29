@@ -14,10 +14,10 @@ public class Solution {
         int temp = 1;
         final int x = 10;
         final int y = 7;
-        for(i = 0; i <= n; i++) {
+        for (i = 0; i <= n; i++) {
         	temp = i;
-        	while(temp != 0) {
-        		if(temp % x == y) {
+        	while (temp != 0) {
+        		if (temp % x == y) {
         			count++;
         		}
         		temp = temp / x;
