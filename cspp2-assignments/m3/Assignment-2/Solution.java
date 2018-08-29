@@ -4,9 +4,15 @@ import java.util.Scanner;
 	Do not modify this main function.
 	*/
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution(){
+		//constructor is used.
+	}
 /* Fill the main function to print the number of 7's between 1 to n*/
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
