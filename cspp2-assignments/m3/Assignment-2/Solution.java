@@ -11,17 +11,15 @@ public class Solution {
         int n = s.nextInt();
         int count = 0;
         int i;
-        for(i = 0;i<n;i++){
-        	//str temp = str(i);
-        	//System.out.println(temp);
-        	if(i%10 == 7){
-        		count++;
-        	}
-        	if(i/10 == 7){ 
-        		count++;
-        	}
-        	
+        for(i = 0;i<=n;i++){
+        	int temp = i;
+        	while(temp!=i){
+        		if(temp%10 == 7){
+        			count++;
+        		}
+        		temp = temp/10;
 
+        	}
 
         }
         System.out.println(count);
