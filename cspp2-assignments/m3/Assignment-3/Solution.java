@@ -18,9 +18,9 @@ public class Solution {
 	*/
     public static int gcd(int n1, int n2)
     {
-        int i,temp=0;
-        for(i =1;i<=n1 && i<=n2;i++){
-            if(n1%i==0 && n2%i==0)
+        int i,temp = 0;
+        for(i = 1; i <= n1 && i <= n2; i++){
+            if(n1 % i == 0 && n2 % i == 0)
             {
                 temp = i;
             }
