@@ -23,7 +23,7 @@ public class Solution {
         		{
         			count++;
         		}
-        		temp = temp/10;
+        		temp = temp/x;
 
         	}
 
