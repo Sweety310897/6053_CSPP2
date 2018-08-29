@@ -12,12 +12,14 @@ public class Solution {
         int count = 0;
         int i;
         int temp = 1;
+        final int x = 10;
+        final int y = 7;
         for(i = 0;i<=n;i++)
         {
         	temp = i;
         	while(temp != 0)
         	{
-        		if(temp%10 == 7)
+        		if(temp % x == y)
         		{
         			count++;
         		}
