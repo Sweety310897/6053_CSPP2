@@ -6,11 +6,11 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+final public class Solution {
 	/**
 	 * Constructs the object.
 	 */
-	private Solution(){
+	private Solution() {
 		//constructor is used.
 	}
 /* Fill the main function to print the number of 7's between 1 to n*/
@@ -20,7 +20,7 @@ public class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0;
         int i;
