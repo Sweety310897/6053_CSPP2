@@ -11,8 +11,8 @@ public class Solution {
 		//System.out.println("sizeA" + sizeA);
 		int[][] sum = new int[rowsA][colsA];
 		int[][] a = new int[rowsA][colsA];
-		for(int i = 0; i < rowsA; i++) {
-			for(int j = 0; j < colsA; j++) {
+		for (int i = 0; i < rowsA; i++) {
+			for (int j = 0; j < colsA; j++) {
 				a[i][j] = s.nextInt();
 			}
 			//System.out.println(a[i] + "a");
@@ -25,19 +25,19 @@ public class Solution {
 		//int sizeB = s.nextInt();
 		//System.out.println("sizeB" + sizeB);
 		int[][] b = new int[rowsB][colsB];
-		for(int i = 0; i < rowsB; i++) {
-			for(int j = 0; j<colsB; j++) {
+		for (int i = 0; i < rowsB; i++) {
+			for (int j = 0; j < colsB; j++) {
 				b[i][j] = s.nextInt();
 			}
 			//System.out.println(b[i] + "b");
-		} 
+		}
 		//System.out.println(b);
-		if(rowsA == rowsB && colsA == colsB) {
-			for(int i = 0;i < rowsA; i++) {
-			for(int j = 0;j < colsA; j++) {
+		if (rowsA == rowsB && colsA == colsB) {
+			for (int i = 0; i < rowsA; i++) {
+			for (int j = 0; j < colsA; j++) {
 				sum[i][j] = a[i][j] + b[i][j];
 				System.out.print(sum[i][j]);
-				if(j < colsA - 1){
+				if (j < colsA - 1) {
 					System.out.print(" ");
 				}
 			}
