@@ -8,7 +8,7 @@ public class Solution {
     }
 	/* Fill the main function to print resultant of addition of matrices*/
 	/**
-	 * { function_description }
+	 * { function_description }.
 	 *
 	 * @param      args  The arguments
 	 */
