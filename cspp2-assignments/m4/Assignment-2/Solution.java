@@ -1,6 +1,17 @@
 import java.util.Scanner;
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+        //constructor is used
+    }
 	/* Fill the main function to print resultant of addition of matrices*/
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int rowsA = s.nextInt();
