@@ -48,11 +48,11 @@ public final class Solution {
         //System.out.println(b);
         if (rowsA == rowsB && colsA == colsB) {
             for (int i = 0; i < rowsA; i++) {
-            for (int j = 0; j < colsA; j++) {
-                sum[i][j] = a[i][j] + b[i][j];
-                System.out.print(sum[i][j]);
-                if (j < colsA - 1) {
-                    System.out.print(" ");
+                for (int j = 0; j < colsA; j++) {
+                    sum[i][j] = a[i][j] + b[i][j];
+                    System.out.print(sum[i][j]);
+                    if (j < colsA - 1) {
+                        System.out.print(" ");
                 }
             }
             System.out.println();
