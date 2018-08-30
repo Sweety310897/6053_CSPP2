@@ -42,7 +42,9 @@ public class Solution {
 			//System.out.println(b[i] + "b");
 		} 
 		//System.out.println(b);
-		for(int i = 0;i<rowsA;i++)
+		if(rowsA == rowsB && colsA == colsB)
+		{
+			for(int i = 0;i<rowsA;i++)
 		{
 			for(int j=0;j<colsA;j++)
 			{
@@ -51,6 +53,9 @@ public class Solution {
 			}
 			System.out.println( );
 		}
+
+		}
+		
 
 		
 	}
