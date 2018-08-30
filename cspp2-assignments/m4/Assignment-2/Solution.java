@@ -53,8 +53,8 @@ public final class Solution {
                     System.out.print(sum[i][j]);
                     if (j < colsA - 1) {
                         System.out.print(" ");
+                    }
                 }
-            }
             System.out.println();
             }
         }
