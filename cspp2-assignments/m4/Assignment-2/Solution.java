@@ -30,7 +30,7 @@ public final class Solution {
                 a[i][j] = s.nextInt();
             }
             //System.out.println(a[i] + "a");
-        } 
+        }
         //System.out.println(a);
         int rowsB = s.nextInt();
         //System.out.println("rowsB" + rowsB);
@@ -57,7 +57,7 @@ public final class Solution {
             }
             System.out.println( );
         }
-        }
+    }
         else {
             System.out.println("not possible");
         }
