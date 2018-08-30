@@ -55,6 +55,10 @@ public class Solution {
 		}
 
 		}
+		else
+		{
+			System.out.println("not possible");
+		}
 		
 
 		
