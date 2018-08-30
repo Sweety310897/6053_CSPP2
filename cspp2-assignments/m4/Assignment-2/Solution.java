@@ -49,7 +49,10 @@ public class Solution {
 			for(int j=0;j<colsA;j++)
 			{
 				sum[i][j] = a[i][j] + b[i][j];
-				System.out.print(sum[i][j] + " ");
+				System.out.print(sum[i][j]);
+				if(j < colsA - 1){
+					System.out.print(" ");
+				}
 			}
 			System.out.println( );
 		}
