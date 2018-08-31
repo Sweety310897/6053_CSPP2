@@ -1,4 +1,5 @@
-// Given an String, Write a java method that returns the decimal value for the given binary string.
+// Given an String, Write a java method that returns
+//the decimal value for the given binary string.
 import java.util.Scanner;
 /**
  * Class Solution
@@ -22,9 +23,8 @@ public final class Solution
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
-		String reverse = reverseString(s);	
+		String reverse = reverseString(s);
 		System.out.println(reverse);
-		
 	}
 	/**
 	 * Reverse function
@@ -35,7 +35,7 @@ public final class Solution
 	 */
 	public static String reverseString(final String s) {
 		String temp = "";
-		for (int i = s.length()-1; i >= 0 ; i-- ) {
+		for (int i = s.length() - 1; i >= 0; i-- ) {
 			temp = temp + s.charAt(i);
 		}
 		return temp;
