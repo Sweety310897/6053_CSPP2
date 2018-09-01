@@ -22,7 +22,7 @@ public final class Solution {
         int flag = 0;
         //int[] a = new int[100];
         //String s ="";
-        for(int i = 1;i<=n;i++)
+        for(int i = 2;i<=n;i++)
         {
             if(i%2!=0)
             {
@@ -38,7 +38,7 @@ public final class Solution {
     static int prime(int n)
     {
         int flag = 0;
-        for(int i =2;i<=n;i++)
+        for(int i =1;i<=n;i++)
         {
             if(n%i==0)
             {
