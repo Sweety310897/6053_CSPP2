@@ -36,7 +36,13 @@ final class Solution {
                     a[i][j] = 100;
                 if(a[i][j] > 150 && a[i][j] <250)
                     a[i][j] = 200;
-                
+                if(a[i][j] > 250 && a[i][j] <350)
+                    a[i][j] = 300;
+                if(a[i][j] > 350 && a[i][j] <450)
+                    a[i][j] = 400;
+                if(a[i][j] > 450 && a[i][j] <550)
+                    a[i][j] = 500;
+
             }
         }
         return a;
