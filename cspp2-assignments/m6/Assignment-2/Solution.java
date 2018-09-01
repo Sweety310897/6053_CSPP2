@@ -32,10 +32,11 @@ final class Solution {
             {
                 if(a[i][j] <= 50)
                     a[i][j] = 0;
-                if(a[i][j] >50 && a[i][j] <= 100)
+                if(a[i][j] >50 && a[i][j] <= 150)
                     a[i][j] = 100;
-                if(a[i][j] <350)
-                    a[i][j] = 300;
+                if(a[i][j] > 150 && a[i][j] <250)
+                    a[i][j] = 200;
+                
             }
         }
         return a;
