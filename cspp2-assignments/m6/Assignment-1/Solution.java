@@ -22,32 +22,23 @@ public final class Solution {
         int flag = 0;
         //int[] a = new int[100];
         //String s ="";
-        for(int i = 2;i<=n;i++)
-        {
-            if(i%2!=0)
-            {
+        for (int i = 2; i <= n; i++) {
+            if (i % 2 != 0) {
                 int temp = prime(i);
                 //a = i;
                 //System.out.println(temp);
             }
         }
-        //System.out.println(temp);
-        
-        
     }
-    static int prime(int n)
-    {
+    static int prime(int n) {
         int flag = 0;
-        for(int i =1;i<=n;i++)
-        {
-            if(n%i==0)
-            {
+        for (int i =1;i <= n; i++) {
+            if (n % i == 0) {
                 flag += 1;
 
             }
         }
-        if(flag!=2)
-        {
+        if (flag != 2) {
             System.out.println(n);
         }
         return 0;
