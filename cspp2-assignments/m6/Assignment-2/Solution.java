@@ -34,6 +34,8 @@ final class Solution {
                     a[i][j] = 0;
                 if(a[i][j] >50 && a[i][j] <= 100)
                     a[i][j] = 100;
+                if(a[i][j] <350)
+                    a[i][j] = 300;
             }
         }
         return a;
