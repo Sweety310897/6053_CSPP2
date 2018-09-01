@@ -18,7 +18,7 @@ public final class Solution {
      * @param      n     n value
      */
     static void oddComposites(final int n) {
-	// write your code here
+    // write your code here
         int flag = 0;
         //int[] a = new int[100];
         //String s ="";
@@ -30,9 +30,16 @@ public final class Solution {
             }
         }
     }
+    /**
+     * To check for prime function.
+     *
+     * @param      n     integer value input
+     *
+     * @return     returns 0
+     */
     static int prime(int n) {
         int flag = 0;
-        for (int i =1;i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             if (n % i == 0) {
                 flag += 1;
 
