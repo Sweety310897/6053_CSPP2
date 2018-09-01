@@ -29,8 +29,8 @@ final class Solution {
         {
             for(int j = 1; j < columns;j++)
             {
-                System.out.println(a[i][j] +"func");
-                System.out.println(("hi"));
+                //System.out.println(a[i][j] +"func");
+                //System.out.println(("hi"));
                 if(a[i][j]<50)
                 {
                     a[i][j] = 0;
