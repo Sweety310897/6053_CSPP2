@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 /**
  * Write a java program to find the odd composite numbers
