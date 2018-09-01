@@ -23,9 +23,6 @@ final class Solution {
      * @return     Matrix of the rounded elements
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
-
-    // write ypur code here
-        //int[][] b = new int[rows][columns];
         for (int i = 0; i < rows; i++)
         {
             for (int j=0; j < columns; j++)
@@ -46,8 +43,6 @@ final class Solution {
             }
         }
         return a;
-        
-    
     }
     /**
      * Main function.
