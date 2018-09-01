@@ -25,6 +25,9 @@ final class Solution {
     static int[][] roundHundred(final int[][] a,
         final int rows, final int columns) {
         final int z = 500;
+        final int y = 550;
+        final int x = 450;
+        final int w = 400;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 if (a[i][j] <= 50) {
@@ -39,10 +42,10 @@ final class Solution {
                 if (a[i][j] > 250 && a[i][j] < 350) {
                     a[i][j] = 300;
                 }
-                if (a[i][j] > 350 && a[i][j] < 450) {
-                    a[i][j] = 400;
+                if (a[i][j] > 350 && a[i][j] < x) {
+                    a[i][j] = w;
                 }
-                if (a[i][j] > 450 && a[i][j] < 550) {
+                if (a[i][j] > x && a[i][j] < y) {
                     a[i][j] = z;
                 }
 
