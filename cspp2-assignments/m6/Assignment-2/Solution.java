@@ -28,21 +28,29 @@ final class Solution {
         final int y = 550;
         final int x = 450;
         final int w = 400;
+        final int p = 350;
+        final int q = 300;
+        final int r = 250;
+        final int s = 200;
+        final int t = 150;
+        final int g = 100;
+        final int h = 50;
+        final int k = 0;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] <= 50) {
-                    a[i][j] = 0;
+                if (a[i][j] <= h) {
+                    a[i][j] = k;
                 }
-                if (a[i][j] > 50 && a[i][j] <= 150) {
-                    a[i][j] = 100;
+                if (a[i][j] > h && a[i][j] <= t) {
+                    a[i][j] = g;
                 }
-                if (a[i][j] > 150 && a[i][j] < 250) {
-                    a[i][j] = 200;
+                if (a[i][j] > t && a[i][j] < r) {
+                    a[i][j] = s;
                 }
-                if (a[i][j] > 250 && a[i][j] < 350) {
-                    a[i][j] = 300;
+                if (a[i][j] > r && a[i][j] < p) {
+                    a[i][j] = q;
                 }
-                if (a[i][j] > 350 && a[i][j] < x) {
+                if (a[i][j] > p && a[i][j] < x) {
                     a[i][j] = w;
                 }
                 if (a[i][j] > x && a[i][j] < y) {
