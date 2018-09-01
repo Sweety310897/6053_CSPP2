@@ -25,16 +25,15 @@ final class Solution {
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
 	// write ypur code here
-        for(int i = 1; i < rows;i++)
+        int[][] b = new int[rows][columns];
+        for(int i = 1;i<=rows;i++)
         {
-            for(int j = 1; j < columns;j++)
+            for(int j=1;j<=columns;j++)
             {
-                //System.out.println(a[i][j] +"func");
-                //System.out.println(("hi"));
-                if(a[i][j]<50)
-                {
+                if(a[i][j] <= 50)
                     a[i][j] = 0;
-                }
+                if(a[i][j] >50 && a[i][j]<=100)
+                    a[i][j] = 100;
             }
         }
         return a;
