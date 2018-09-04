@@ -24,8 +24,7 @@ class InputValidator {
         final int z = 6;
         if (input.length() >= z) {
             return true;
-    }
-        else {
+        } else {
             return false;
         }
     }
