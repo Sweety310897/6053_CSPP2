@@ -14,7 +14,7 @@ public final class Solution {
     }
 
     /**
-     * { function_description }.
+     * This is for main function.
      *
      * @param      args  The arguments
      */
@@ -29,12 +29,12 @@ public final class Solution {
     Need to write the gcd function and print the output.
     */
     /**
-     * { function_description }.
+     * This function is to calculate gcd.
      *
      * @param      n1    The n 1
      * @param      n2    The n 2
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns gcd of the numbers.
      */
     public static int gcd(final int n1, final int n2) {
         int i, temp = 0;
