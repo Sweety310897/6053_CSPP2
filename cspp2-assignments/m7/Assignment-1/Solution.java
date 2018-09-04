@@ -4,7 +4,7 @@ import java.util.Scanner;
  */
 class InputValidator {
 	private String input;
-	final int z = 6;
+	
 	/**
 	 * Constructs the object.
 	 *
@@ -19,6 +19,7 @@ class InputValidator {
 	 * @return     returns boolean value.
 	 */
 	boolean validateData() {
+		final int z = 6;
 		if (input.length() >= z) {
 			return true;
 		}
