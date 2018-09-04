@@ -24,16 +24,15 @@ class InputValidator {
         final int z = 6;
         if (input.length() >= z) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
 }
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -42,6 +41,8 @@ public class Solution {
     }
     /**
      * Main function.
+     *
+     * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
