@@ -1,9 +1,15 @@
 import java.util.*;
-class InputValidator
-{
-	/*Write the atrributes 
-	*and methods for InputValidator*/
+/**
+ * Class for input validator.
+ */
+class InputValidator {
+	
 	private String input;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      temp  The temporary
+	 */
 	InputValidator(String temp) {
 		this.input = temp;
 	}
@@ -17,16 +23,17 @@ class InputValidator
 	}
 
 }
-public class Solution
-{
-	public static void main(String args[])
-    {
-    	Scanner s=new Scanner(System.in);
-    	String input=s.next();
-    	InputValidator i=new InputValidator(input);    	
+/**
+ * Class for solution.
+ */
+public class Solution {
+/**
+ * Main function.
+ */
+	public static void main(String args[]) {
+    	Scanner s = new Scanner(System.in);
+    	String input = s.next();
+    	InputValidator i = new InputValidator(input);    	
     	System.out.println(i.validateData());
-
-    
     }
-
 }
