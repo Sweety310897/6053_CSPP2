@@ -13,9 +13,9 @@ public final class Solution {
     Do not modify this main function.
     */
     /**
-     * { function_description }.
+     * This is main function.
      *
-     * @param      args  The arguments
+     * @param      args  string arguments
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
@@ -28,12 +28,12 @@ public final class Solution {
     Need to write the power function and print the output.
     */
     /**
-     * { function_description }.
+     * this function is to calculate power.
      *
      * @param      base      The base
      * @param      exponent  The exponent
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the result of base power.
      */
     public static long power(final int base, final int exponent) {
         if (exponent > 0) {
