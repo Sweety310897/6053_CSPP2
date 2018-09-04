@@ -10,7 +10,7 @@ class InputValidator {
 	 *
 	 * @param      temp  The temporary
 	 */
-	InputValidator(String temp) {
+	InputValidator(final String temp) {
 		this.input = temp;
 	}
 	boolean validateData() {
@@ -30,10 +30,13 @@ public class Solution {
 /**
  * Main function.
  */
-	public static void main(String args[]) {
+	/**
+	 * Main function.
+	 */
+	public static void main(final String args[]) {
     	Scanner s = new Scanner(System.in);
     	String input = s.next();
-    	InputValidator i = new InputValidator(input);    	
+    	InputValidator i = new InputValidator(input);
     	System.out.println(i.validateData());
     }
 }
