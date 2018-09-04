@@ -5,6 +5,7 @@ import java.util.*;
 class InputValidator {
 	
 	private String input;
+	int z = 6;
 	/**
 	 * Constructs the object.
 	 *
@@ -13,8 +14,13 @@ class InputValidator {
 	InputValidator(final String temp) {
 		this.input = temp;
 	}
+	/**
+	 * To return true or false.
+	 *
+	 * @return     returns boolean value.
+	 */
 	boolean validateData() {
-		if(input.length() >= 6) {
+		if (input.length() >= z) {
 			return true;
 		}
 		else {
