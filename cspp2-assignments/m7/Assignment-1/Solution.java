@@ -1,11 +1,10 @@
-import java.util.*;
+import java.util.Scanner;
 /**
  * Class for input validator.
  */
 class InputValidator {
-	
 	private String input;
-	int z = 6;
+	final int z = 6;
 	/**
 	 * Constructs the object.
 	 *
