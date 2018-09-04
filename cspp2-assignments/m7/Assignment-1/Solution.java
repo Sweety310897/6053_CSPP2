@@ -4,7 +4,6 @@ import java.util.Scanner;
  */
 class InputValidator {
 	private String input;
-	
 	/**
 	 * Constructs the object.
 	 *
@@ -22,7 +21,7 @@ class InputValidator {
 		final int z = 6;
 		if (input.length() >= z) {
 			return true;
-		}
+	}
 		else {
 			return false;
 		}
