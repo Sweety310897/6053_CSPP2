@@ -11,7 +11,7 @@ public final class Solution {
     }
     /**
     Do not modify this main function.
-    @param      args  The arguments
+    @param      args  This is main function.
     */
     public static void main(final String[] args) {
     /*
@@ -25,9 +25,9 @@ public final class Solution {
     }
     /**
     Need to write the rootsOfQuadraticEquation function and print the output.
-    @param      a     { parameter_description }
-    @param      b     { parameter_description }
-    @param      c     { parameter_description }
+    @param      a     a is a input integer
+    @param      b     b is a input integer
+    @param      c     c is a input integer
     */
     public static void roots(final int a, final int b, final int c) {
         double temp1 = (-b + (Math.sqrt((b * b) - (2 * 2 * a * c)))) / (2 * a);
