@@ -39,7 +39,7 @@ public class Solution {
 	/**
 	 * Main function.
 	 */
-	public static void main(final String args[]) {
+	public static void main(final String[] args) {
     	Scanner s = new Scanner(System.in);
     	String input = s.next();
     	InputValidator i = new InputValidator(input);
