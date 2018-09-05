@@ -99,12 +99,11 @@ public final class List {
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
-     * to the objects outside the list 
+     * to the objects outside the list
      * The method returns an int. Empty list should return 0.
      */
-    
     /**
-     * size function
+     * size function.
      *
      * @return     size value.
      */
@@ -117,7 +116,7 @@ public final class List {
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
      * Think about what happens when 
-     * an item is removed from the middle of the list
+     * an item is removed from the middle of the list.
      * It creates a hole in the list, right?
      * This would mean, all the items that are
      * to the right side of the removed item should be
@@ -150,7 +149,6 @@ public final class List {
         	System.out.println("Invalid Position Exception");
         }
     }
-
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -162,7 +160,6 @@ public final class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    
     /**
      * gets the item of the index.
      *
