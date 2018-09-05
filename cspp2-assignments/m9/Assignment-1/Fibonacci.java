@@ -47,7 +47,7 @@ public final class Fibonacci {
         int a = 0;
         int b = 1;
         //list = new int[n];
-        List l = new List();
+        List l = new List(n);
         int i = 0;
         l.add(a);
         l.add(b);
