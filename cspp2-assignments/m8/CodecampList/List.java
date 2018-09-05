@@ -23,7 +23,6 @@ public final class List {
      * This is not desirable and so having private access specifer
      * will protect the array such corruption.
      * This is a hard concept to understand. Discuss with your mentor.
-     *
     */
     // declare a private int[]
     // don't create the array yet using new
@@ -46,12 +45,14 @@ public final class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
     // declare a private int size
     // again, don't initialize it here
-    // variable initialization should be done in the constructor
+    // variable initialization should be done in the constructor.
     private int size;
+    /**
+     * size.
+     */
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
@@ -201,9 +202,9 @@ public final class List {
         // Replace the code below
         String string = "[";
         String eachchar = ",";
-        for(int i = 0; i < size - 1; i++) {
+        for (int i = 0; i < size - 1; i++) {
         	string += Integer.toString(list[i]);
-        	if(i < size - 1) {
+        	if (i < size - 1) {
         		string += eachchar;
         	}
         }
