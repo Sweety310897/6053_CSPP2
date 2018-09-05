@@ -212,8 +212,7 @@ public final class List {
         }
         string += list[size - 1] + "]";
         return string;
-    } 
-    
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -227,10 +226,10 @@ public final class List {
      *
      * @return     true or false.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
-        for(int i = 0; i < size; i++) {
-        	if(list[i] == item) {
+        for (int i = 0; i < size; i++) {
+        	if (list[i] == item) {
         		return true;
         	}
         }
@@ -238,7 +237,7 @@ public final class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -263,7 +262,7 @@ public final class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
