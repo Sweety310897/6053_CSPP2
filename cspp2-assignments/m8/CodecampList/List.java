@@ -1,9 +1,10 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
-public class List {
+/**
+ * class list.
+ */
+public final class List {
 	//Implement all the methods mentioned to build a ListADT
-
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -11,7 +12,6 @@ public class List {
      * So, assume we are only going to have ints in the list
      * We need to create an array of ints to store the items
      * added to the list.
-     *
      * Create a variable of the type int[]
      * Use the private access specifier
      * Why private access specifier and why not public?
@@ -25,7 +25,6 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -49,7 +48,6 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -57,6 +55,9 @@ public class List {
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
+     */
+    /**
+     * Constructs the object.
      */
     public List() {
 
@@ -75,7 +76,6 @@ public class List {
     	final int num = 50;
     	list = new int[num];
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -84,27 +84,34 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    /**
+     * adds the item to the list.
+     *
+     * @param      item  The item
+     */
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         list[size] = item;
         size++;
     }
-
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
-     * to the objects outside the list
-     * 
+     * to the objects outside the list 
      * The method returns an int. Empty list should return 0.
+     */
+    
+    /**
+     * size function
+     *
+     * @return     size value.
      */
     public int size() {
         // replace the code below to implement the size method
         return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -125,20 +132,23 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    /**
+     * removes the item of the index
+     *
+     * @param      index  The index
+     */
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index < size) {
-        	for(int i = index; i < size - 1; i++) {
-        		list[i] = list[i+1];
+        	for (int i = index; i < size - 1; i++) {
+        		list[i] = list[i + 1];
         	}
         	size--;
         	list[size] = 0;
         } else {
         	System.out.println("Invalid Position Exception");
         }
-
-        
     }
 
     /*
@@ -152,14 +162,21 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    
+    /**
+     * gets the item of the index.
+     *
+     * @param      index  The index
+     *
+     * @return     index value.
+     */
+    public int get(final int index) {
         // Replace the code below to write the code for get
-        if(index > -1 && index < size) {
+        if (index > -1 && index < size) {
         	return list[index];
         }
         return -1;
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -169,7 +186,6 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -178,7 +194,11 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0]
      * toString should only return the items in the list and
      * not all the elements of the array.
+     */
+    /**
+     * Returns a string representation of the object.
      *
+     * @return     String representation of the object.
      */
     public String toString() {
         // Replace the code below
@@ -200,6 +220,13 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * Boolean function.
+     *
+     * @param      item  The item
+     *
+     * @return     true or false.
+     */
     public boolean contains(int item) {
         // Replace the code below
         for(int i = 0; i < size; i++) {
@@ -215,17 +242,28 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     the index of the item.
+     */
+    public int indexOf(final int item) {
         // Replace the code below
-        for(int i = 0; i < size; i++) {
-        	if(list[i] == item) {
+        for (int i = 0; i < size; i++) {
+        	if (list[i] == item) {
         		return i;
         	}
         }
         return -1;
     }
-
-	public static void main(String[] args) {
+	/**
+     * Main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
