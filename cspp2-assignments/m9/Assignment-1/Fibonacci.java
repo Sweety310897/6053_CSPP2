@@ -53,7 +53,7 @@ public final class Fibonacci {
         l.add(b);
         while (i < n - 2) {
             int c = a + b;
-            l.add(c);            
+            l.add(c);
             a = b;
             b = c;
             i++;
