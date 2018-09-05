@@ -4,7 +4,7 @@ import java.util.Scanner;
  * class list.
  */
 public final class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -27,6 +27,9 @@ public final class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+     * list.
+     */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -49,6 +52,9 @@ public final class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor.
+    /**
+     * size.
+     */
     private int size;
     /**
      * size.
@@ -73,9 +79,9 @@ public final class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
 
-    	int size = 0;
-    	final int num = 50;
-    	list = new int[num];
+        size = 0;
+        final int num = 50;
+        list = new int[num];
     }
     /*
      * The add method does what the name suggests.
@@ -116,7 +122,7 @@ public final class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list.
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -133,7 +139,7 @@ public final class List {
      * The method returns void (nothing)
      */
     /**
-     * removes the item of the index
+     * removes the item of the index.
      *
      * @param      index  The index
      */
@@ -141,13 +147,13 @@ public final class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index < size) {
-        	for (int i = index; i < size - 1; i++) {
-        		list[i] = list[i + 1];
-        	}
-        	size--;
-        	list[size] = 0;
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
+            }
+            size--;
+            list[size] = 0;
         } else {
-        	System.out.println("Invalid Position Exception");
+            System.out.println("Invalid Position Exception");
         }
     }
     /*
@@ -158,7 +164,7 @@ public final class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     /**
@@ -171,7 +177,7 @@ public final class List {
     public int get(final int index) {
         // Replace the code below to write the code for get
         if (index > -1 && index < size) {
-        	return list[index];
+            return list[index];
         }
         return -1;
     }
@@ -203,10 +209,10 @@ public final class List {
         String string = "[";
         String eachchar = ",";
         for (int i = 0; i < size - 1; i++) {
-        	string += Integer.toString(list[i]);
-        	if (i < size - 1) {
-        		string += eachchar;
-        	}
+            string += Integer.toString(list[i]);
+            if (i < size - 1) {
+                string += eachchar;
+            }
         }
         string += list[size - 1] + "]";
         return string;
@@ -227,9 +233,9 @@ public final class List {
     public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-        	if (list[i] == item) {
-        		return true;
-        	}
+            if (list[i] == item) {
+                return true;
+            }
         }
         return false;
     }
@@ -249,13 +255,13 @@ public final class List {
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-        	if (list[i] == item) {
-        		return i;
-        	}
+            if (list[i] == item) {
+                return i;
+            }
         }
         return -1;
     }
-	/**
+    /**
      * Main function.
      *
      * @param      args  The arguments
@@ -305,5 +311,12 @@ public final class List {
                 break;
             }
         }
-	}
+    }
 }
+
+
+
+
+
+
+
