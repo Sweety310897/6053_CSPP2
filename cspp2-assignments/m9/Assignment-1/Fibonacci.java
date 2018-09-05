@@ -18,7 +18,7 @@ import java.util.Scanner;
 /**
  * Class for fibonacci.
  */
-public class Fibonacci {
+public final class Fibonacci {
     /**
      * Constructs the object.
      */
@@ -48,7 +48,7 @@ public class Fibonacci {
         int i = 0;
         l.add(a);
         l.add(b);
-        while (i < n-2) {
+        while (i < n - 2) {
             int c = a + b;
             l.add(c);            
             a = b;
@@ -57,7 +57,7 @@ public class Fibonacci {
         }
         return l;
     }
-	/**
+    /**
      * Main function.
      *
      * @param      args  The arguments
