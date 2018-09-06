@@ -70,7 +70,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        final int x = 10; 
+        final int x = 10;
         list = new int[x];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -85,7 +85,7 @@ public class List {
      * raises a Index Out of Bounds Exception
      * There will be some clients of the ADT that will require
      * the list to contain n elements which is known
-     * at the time of creating the list. 
+     * at the time of creating the list.
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
@@ -105,21 +105,21 @@ public class List {
      * What is the end of the list?
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
-     * to the list. 
+     * to the list.
      * The method returns void (nothing)
      */
     /**
      * add function.
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
-        //list[size++] = item; 
-        if(size < list.length) {
+        //list[size++] = item;
+        if (size < list.length) {
             list[size++] = item;
         } else {
             resize(item);
-        }  
+        }
     }
     /*
      * Resize the list
@@ -136,14 +136,19 @@ public class List {
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array.
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize().
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object Oriented Programming
+     */
+    /**
+     * resize function.
+     *
+     * @param      item  The item
      */
     public void resize(final int item) {
         list = Arrays.copyOf(list, size * 2);
@@ -154,6 +159,10 @@ public class List {
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list.
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * size function.
+     * @return     returns size.
      */
     public int size() {
         return size;
