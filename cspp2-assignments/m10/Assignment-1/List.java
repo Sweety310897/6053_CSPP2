@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
     /*
@@ -77,6 +80,11 @@ public class List {
      * a list capacity of n items where n is given as an argument to
      * constructor.
      */
+    /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity
+     */
     public List(int capacity) {
         size = 0;
         list = new int[capacity];
@@ -90,6 +98,11 @@ public class List {
      * Think about how you can use the size variable to add item
      * to the list. 
      * The method returns void (nothing)
+     */
+    /**
+     * add function.
+     *
+     * @param      item  The item
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
@@ -206,11 +219,12 @@ public class List {
      * not all the elements of the array.
      */
     public String toString() {
-        if(size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
@@ -222,24 +236,37 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    
+    /**
+     * boolean function.
+     *
+     * @param      item  The item
+     *
+     * @return     returns true or false.
+     */
     public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+    public int indexOf(final int item) {
+        for (int i = 0; i < size; i++) {
+            if (item == list[i])
                 return i;
         }
         return -1;
     }
-   /*Inserts all the elements of specified int 
+   /*Inserts all the elements of specified int
     array to the end of list*/
-    public void addAll(int[] items) {
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
+    public void addAll(final int[] items) {
         // int length = items.length + size;
         // int temp = 0;
      //    for(int i = size; i < length; i++) {
@@ -260,7 +287,7 @@ public class List {
          // write the logic
         if (index >= 0) {
             for (int i = size; i > index; i--) {
-            list[i] = list[i-1];
+            list[i] = list[i - 1];
             }
         list[index] = item;
         size++;
@@ -286,6 +313,11 @@ public class List {
         }
         return count;
     }
+    /**
+     * Main function.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
