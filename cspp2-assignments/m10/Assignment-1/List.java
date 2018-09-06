@@ -28,6 +28,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+     * list is private.
+    */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
