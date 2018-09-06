@@ -287,14 +287,16 @@ public class Solution {
 		        }
 	        break;
 
-	        case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+	        case "O"://This case will be executed for Student
+	        //type list i.e to store List of Student Objects
 	        	List<Student> listStudent = new List();
 		        while (stdin.hasNext()) {
 		            // read the line
 		            String line = stdin.nextLine();
 		            // split the line using space
 		            String[] tokens = line.split(" ");
-		            // based on the list operation invoke the corresponding method
+		            // based on the list operation
+		            //invoke the corresponding method
 		            switch (tokens[0]) {
 		                case "add":
 			                listStudent.add(new Student(tokens[1]));
@@ -316,7 +318,8 @@ public class Solution {
 		                System.out.println(listStudent.size());
 		                break;
 		                case "print":
-		                // print the list (implement toString in List class
+		                // print the list (implement toString in
+		                // List class
 		                //for this to work)
 		                // expected format is [item-1,item-2,...,item-n]
 		                // review the output testcase file
