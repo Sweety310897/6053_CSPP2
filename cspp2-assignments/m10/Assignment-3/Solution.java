@@ -5,17 +5,34 @@ import java.util.Scanner;
  * Class for student.
  */
 class Student {
+    /**
+     * string variable name.
+     */
     private String name;
-    
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name is string.
+     */
     public Student(String name) {//A constructor used to initialize the instance variables
         this.name = name;
     }
-
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {//Getter method which returns the value of instance variable
         return this.name;
     }
-
     @Override
+    /**
+     * compare the objects.
+     *
+     * @param      other  The other
+     *
+     * @return     return boolean value.
+     */
     public boolean equals(Object other) { //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -24,7 +41,11 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.name;
     }
