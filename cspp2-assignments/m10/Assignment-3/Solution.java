@@ -27,7 +27,6 @@ class Student {
     //Getter method which returns the value of instance variable
         return this.name;
     }
-    @Override
     /**
      * compare the objects.
      *
@@ -35,6 +34,7 @@ class Student {
      *
      * @return     return boolean value.
      */
+    @Override
     public boolean equals(final Object other) {
     //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
