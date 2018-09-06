@@ -35,7 +35,8 @@ class Student {
      *
      * @return     return boolean value.
      */
-    public boolean equals(final Object other) { //This method is to check if two students names are equal or not
+    public boolean equals(final Object other) {
+    //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
         }
