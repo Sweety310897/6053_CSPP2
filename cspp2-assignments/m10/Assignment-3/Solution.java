@@ -334,6 +334,8 @@ public class Solution {
 		                case "contains":
 		                System.out.println(listStudent.contains(new Student(tokens[1])));
 		                break;
+		                default:
+		                break;
 		            }
 		        }
 	        	break;
