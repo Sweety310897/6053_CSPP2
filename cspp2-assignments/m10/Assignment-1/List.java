@@ -237,7 +237,7 @@ public class List {
      * List l = new List();
      * System.out.println(l);
      * This statement is a shortcut for
-     * System.out.println(l.toString()); 
+     * System.out.println(l.toString());
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -282,6 +282,13 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     returns value in index.
+     */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
@@ -304,7 +311,7 @@ public class List {
         //  temp+=1;
         // }
         // size = length;
-        for (int i = 0;i < items.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
     }
@@ -319,7 +326,7 @@ public class List {
      * @param      index  The index
      * @param      item   The item
      */
-    public void add(final int index,final int item) {
+    public void add(final int index, final int item) {
          // write the logic
         if (index >= 0) {
             for (int i = size; i > index; i--) {
@@ -367,7 +374,7 @@ public class List {
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
-               case "add":
+                case "add":
                 if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
                 if (t.length == 1) {
