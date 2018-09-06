@@ -204,6 +204,9 @@ public class List {
      * number of items in the list? Would size variable be useful?
      */
     public int get(int index) {
+    	if(index < 0) {
+    		System.out.println("Negative Index Exception");
+    	}
         if(index < 0 || index >= size) {
             return -1;
         } else {
