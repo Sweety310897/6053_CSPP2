@@ -14,7 +14,8 @@ class Student {
      *
      * @param      name  The name is string.
      */
-    public Student(String name) {//A constructor used to initialize the instance variables
+    public Student(final String name) {
+    //A constructor used to initialize the instance variables
         this.name = name;
     }
     /**
