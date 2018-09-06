@@ -212,8 +212,15 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * get function.
+     *
+     * @param      index  The index
+     *
+     * @return     returns value present in index.
      */
     public int get(final int index) {
         if (index < 0 || index >= size) {
@@ -239,6 +246,10 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0]
      * toString should only return the items in the list and
      * not all the elements of the array.
+     */
+    /**
+     * Returns a string representation of the object.
+     * @return     String representation of the object.
      */
     public String toString() {
         if (size == 0) {
@@ -273,8 +284,9 @@ public class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
@@ -300,6 +312,12 @@ public class List {
         Inserts the specified element at the specified index
     by moving all the elements to the right.
         The method returns void (nothing)
+     */
+    /**
+     * add function.
+     *
+     * @param      index  The index
+     * @param      item   The item
      */
     public void add(final int index,final int item) {
          // write the logic
