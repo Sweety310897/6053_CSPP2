@@ -1,6 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class List {
 	//Implement all the methods mentioned to build a ListADT
 
@@ -145,7 +145,10 @@ public class List {
      *
      */
 
-    // todo create resize method
+    public void resize(final int item) {
+        list = Arrays.copyOf(list, size * 2);
+        list[size++] = item;
+    }
 
     /*
      * The size method returns the value of the size.
@@ -276,6 +279,9 @@ public class List {
     		temp+=1;
     	}
     	size = length;
+    	// for(int i = 0;i < items.length;i++) {
+    	// 	add(items[i]);
+    	// }
     }
 
      /* 
