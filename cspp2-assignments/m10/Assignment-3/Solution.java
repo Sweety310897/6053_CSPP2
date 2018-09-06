@@ -23,7 +23,8 @@ class Student {
      *
      * @return     The name.
      */
-    public String getName() {//Getter method which returns the value of instance variable
+    public String getName() {
+    //Getter method which returns the value of instance variable
         return this.name;
     }
     @Override
@@ -34,7 +35,7 @@ class Student {
      *
      * @return     return boolean value.
      */
-    public boolean equals(Object other) { //This method is to check if two students names are equal or not
+    public boolean equals(final Object other) { //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
         }
@@ -54,7 +55,7 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
