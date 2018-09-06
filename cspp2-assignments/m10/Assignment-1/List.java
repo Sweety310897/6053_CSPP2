@@ -239,8 +239,7 @@ public class List {
     }
    /*Inserts all the elements of specified int 
     array to the end of list*/
-    public void addAll(int items[])
-    {
+    public void addAll(int[] items) {
         // int length = items.length + size;
         // int temp = 0;
      //    for(int i = size; i < length; i++) {
@@ -248,16 +247,16 @@ public class List {
         //  temp+=1;
         // }
         // size = length;
-        for(int i = 0;i < items.length;i++) {
+        for (int i = 0;i < items.length; i++) {
             add(items[i]);
         }
     }
-     /* 
-        Inserts the specified element at the specified index 
+     /*
+        Inserts the specified element at the specified index
     by moving all the elements to the right.
         The method returns void (nothing)
      */
-    public void add(int index,int item) {
+    public void add(final int index,final int item) {
          // write the logic
         if (index >= 0) {
             for (int i = size; i > index; i--) {
