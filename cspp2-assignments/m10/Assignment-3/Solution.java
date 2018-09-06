@@ -265,7 +265,8 @@ public class Solution {
 		                System.out.println(listDouble.size());
 		                break;
 		                case "print":
-		                // print the list (implement toString in StringList class
+		                // print the list (implement toString
+		                // in StringList class
 		                //for this to work)
 		                // expected format is [item-1,item-2,...,item-n]
 		                // review the output testcase file
@@ -275,13 +276,16 @@ public class Solution {
 		                listDouble.remove(Integer.parseInt(tokens[1]));
 		                break;
 		                case "indexOf":
-		                System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
+		                System.out.println(listDouble.indexOf
+		                	(Double.parseDouble(tokens[1])));
 		                break;
 		                case "get":
-		                System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
+		                System.out.println(listDouble.get(
+		                	Integer.parseInt(tokens[1])));
 		                break;
 		                case "contains":
-		                System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
+		                System.out.println(listDouble.contains(
+		                	Double.parseDouble(tokens[1])));
 		                break;
 		            }
 		        }
