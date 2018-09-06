@@ -329,7 +329,8 @@ public class Solution {
 		                System.out.println(listStudent.indexOf(new Student(tokens[1])));
 		                break;
 		                case "get":
-		                System.out.println(listStudent.get(Integer.parseInt(tokens[1])));
+		                System.out.println(listStudent.get(
+		                	Integer.parseInt(tokens[1])));
 		                break;
 		                case "contains":
 		                System.out.println(listStudent.contains(
