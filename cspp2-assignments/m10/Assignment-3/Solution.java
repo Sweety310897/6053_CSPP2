@@ -72,7 +72,6 @@ public final class Solution {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
-
         switch (objectType) {
             case "S"://This case will be executed for String type list
                 List<String> listString = new List();
