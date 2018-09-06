@@ -171,7 +171,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -186,6 +186,11 @@ public class List {
      * So, the new array looks like this.
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
+     */
+    /**
+     * remove function.
+     *
+     * @param      index  The index
      */
     public void remove(final int index) {
         // write the logic for remove here.
@@ -210,8 +215,8 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
-        if(index < 0 || index >= size) {
+    public int get(final int index) {
+        if (index < 0 || index >= size) {
             return -1;
         } else {
             return list[index];
@@ -253,12 +258,9 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    
     /**
      * boolean function.
-     *
      * @param      item  The item
-     *
      * @return     returns true or false.
      */
     public boolean contains(final int item) {
@@ -280,7 +282,6 @@ public class List {
     array to the end of list*/
     /**
      * Adds all.
-     *
      * @param      items  The items
      */
     public void addAll(final int[] items) {
