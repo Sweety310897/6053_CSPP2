@@ -26,16 +26,21 @@ class Student {
 		return this.name;
 	}
 }
-
+/**
+ * Class for solution.
+ */
 public class Solution {
-	
-
-	public static void main(String[] args) {
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
-        switch(objectType) {
+        switch (objectType) {
         	case "S"://This case will be executed for String type list
         		List<String> listString = new List();
 		        while (stdin.hasNext()) {
@@ -43,13 +48,14 @@ public class Solution {
 		            String line = stdin.nextLine();
 		            // split the line using space
 		            String[] tokens = line.split(" ");
-		            // based on the list operation invoke the corresponding method
+		            // based on the list operation
+		            // invoke the corresponding method
 		            switch (tokens[0]) {
 		                case "add":
 			            listString.add(tokens[1]);
 		                break;
 		                case "addAll":
-		                if(tokens.length == 2){
+		                if (tokens.length == 2) {
 		                String[] t1 = tokens[1].split(",");
 		                listString.addAll(t1);
 		                }
@@ -62,7 +68,7 @@ public class Solution {
 		                break;
 		                case "print":
 		                // print the list (implement toString in List class
-		                //for this to work)
+		                // List class for this to work)
 		                // expected format is [item-1,item-2,...,item-n]
 		                // review the output testcase file
 		                System.out.println(listString);
@@ -80,7 +86,8 @@ public class Solution {
 		                	Integer.parseInt(tokens[1])));
 		                break;
 		                case "contains":
-		                System.out.println(listString.contains(tokens[1]));
+		                System.out.println(listString.contains(
+		                	tokens[1]));
 		                break;
 		                default:
 		                break;
@@ -95,16 +102,17 @@ public class Solution {
 		            String line = stdin.nextLine();
 		            // split the line using space
 		            String[] tokens = line.split(" ");
-		            // based on the list operation invoke the corresponding method
+		            // based on the list operation
+		            // invoke the corresponding method
 		            switch (tokens[0]) {
 		                case "add":
-			                listInteger.add(Integer.parseInt(tokens[1]));
+			            listInteger.add(Integer.parseInt(tokens[1]));
 		                break;
 		                case "addAll":
-		                if(tokens.length == 2){
+		                if (tokens.length == 2) {
 		                String[] t1 = tokens[1].split(",");
 		                Integer[] temp = new Integer[t1.length];
-		                for (int i = 0;i < temp.length; i++) {
+		                for (int i = 0; i < temp.length; i++) {
 		                	temp[i] = Integer.parseInt(t1[i]);
 		                }
 		                listInteger.addAll(temp);
@@ -117,8 +125,8 @@ public class Solution {
 		                System.out.println(listInteger.size());
 		                break;
 		                case "print":
-		                // print the list (implement toString in List class
-		                //for this to work)
+		                // print the list (implement toStringin List class
+		                // in List class for this to work)
 		                // expected format is [item-1,item-2,...,item-n]
 		                // review the output testcase file
 		                System.out.println(listInteger);
@@ -151,16 +159,17 @@ public class Solution {
 		            String line = stdin.nextLine();
 		            // split the line using space
 		            String[] tokens = line.split(" ");
-		            // based on the list operation invoke the corresponding method
+		            // based on the list operation
+		            // invoke the corresponding method
 		            switch (tokens[0]) {
 		                case "add":
 			            listFloat.add(Float.parseFloat(tokens[1]));
 		                break;
 		                case "addAll":
-		                if (tokens.length == 2){
+		                if (tokens.length == 2) {
 		                String[] t1 = tokens[1].split(",");
-		                Float temp[] = new Float[t1.length];
-		                for (int i = 0; i < t1.length; i++ ) {
+		                Float[] temp = new Float[t1.length];
+		                for (int i = 0; i < t1.length; i++) {
 		                	temp[i] = Float.parseFloat(t1[i]);
 		                }
 		                listFloat.addAll(temp);
@@ -173,8 +182,8 @@ public class Solution {
 		                System.out.println(listFloat.size());
 		                break;
 		                case "print":
-		                // print the list (implement toString in List class
-		                //for this to work)
+		                // print the list (implement toString
+		                // in List class for this to work)
 		                // expected format is [item-1,item-2,...,item-n]
 		                // review the output testcase file
 		                System.out.println(listFloat);
@@ -207,13 +216,14 @@ public class Solution {
 		            String line = stdin.nextLine();
 		            // split the line using space
 		            String[] tokens = line.split(" ");
-		            // based on the list operation invoke the corresponding method
+		            // based on the list operation invoke
+		            // the corresponding method
 		            switch (tokens[0]) {
 		                case "add":
 			                listCharacter.add(tokens[1].charAt(0));
 		                break;
 		                case "addAll":
-		                if (tokens.length == 2){
+		                if (tokens.length == 2) {
 		                String[] t1 = tokens[1].split(",");
 		                Character[] temp = new Character[t1.length];
 		                for (int i = 0; i < t1.length; i++) {
@@ -229,14 +239,16 @@ public class Solution {
 		                System.out.println(listCharacter.size());
 		                break;
 		                case "print":
-		                // print the list (implement toString in List class
-		                //for this to work)
+		                // print the list (implement toString 
+		                // in List class
+		                // for this to work)
 		                // expected format is [item-1,item-2,...,item-n]
 		                // review the output testcase file
 		                System.out.println(listCharacter);
 		                break;
 		                case "remove":
-		                listCharacter.remove(Integer.parseInt(tokens[1]));
+		                listCharacter.remove(
+		                	Integer.parseInt(tokens[1]));
 		                break;
 		                case "indexOf":
 		                System.out.println(listCharacter.indexOf(
@@ -263,10 +275,12 @@ public class Solution {
 		            String line = stdin.nextLine();
 		            // split the line using space
 		            String[] tokens = line.split(" ");
-		            // based on the list operation invoke the corresponding method
+		            // based on the list operation
+		            // invoke the corresponding method
 		            switch (tokens[0]) {
 		                case "add":
-			            listDouble.add(Double.parseDouble(tokens[1]));
+			            listDouble.add(Double.parseDouble(
+			            	tokens[1]));
 		                break;
 		                case "addAll":
 		                if (tokens.length == 2) {
