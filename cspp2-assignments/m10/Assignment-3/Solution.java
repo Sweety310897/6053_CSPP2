@@ -31,6 +31,12 @@ class Student {
  */
 public class Solution {
 	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//constructor is not used.
+	}
+	/**
 	 * main function.
 	 *
 	 * @param      args  The arguments
@@ -106,7 +112,8 @@ public class Solution {
 		            // invoke the corresponding method
 		            switch (tokens[0]) {
 		                case "add":
-			            listInteger.add(Integer.parseInt(tokens[1]));
+			            listInteger.add(Integer.parseInt(
+			            	tokens[1]));
 		                break;
 		                case "addAll":
 		                if (tokens.length == 2) {
@@ -125,7 +132,8 @@ public class Solution {
 		                System.out.println(listInteger.size());
 		                break;
 		                case "print":
-		                // print the list (implement toStringin List class
+		                // print the list (implement toStringin
+		                // List class
 		                // in List class for this to work)
 		                // expected format is [item-1,item-2,...,item-n]
 		                // review the output testcase file
@@ -239,7 +247,7 @@ public class Solution {
 		                System.out.println(listCharacter.size());
 		                break;
 		                case "print":
-		                // print the list (implement toString 
+		                // print the list (implement toString
 		                // in List class
 		                // for this to work)
 		                // expected format is [item-1,item-2,...,item-n]
