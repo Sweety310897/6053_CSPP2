@@ -53,10 +53,16 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+     * size is private.
+    */
     private int size;
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
+     */
+    /**
+     * Constructs the object.
      */
     public List() {
         // what are the two variables to be initialized here?
@@ -64,7 +70,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        final int x = 10; 
+        list = new int[x];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -85,10 +92,9 @@ public class List {
      */
     /**
      * Constructs the object.
-     *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -104,7 +110,6 @@ public class List {
      */
     /**
      * add function.
-     *
      * @param      item  The item
      */
     public void add(int item) {
