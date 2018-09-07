@@ -1,10 +1,15 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+ * Class for solution.
+ */
 public class Solution {
-	
-
-	public static void main(String[] args) {
+	/**
+     * Main function.
+     *
+     * @param      args  The arguments
+     */
+	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
         StringListInterface l = (StringListInterface)sl;
