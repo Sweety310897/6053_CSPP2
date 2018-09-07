@@ -10,7 +10,8 @@ class Student {
 		return this.name;
 	}
 	@Override
-	public boolean equals(Object other) { //This method is to check if two students names are equal or not
+	public boolean equals(final Object other) {
+    //This method is to check if two students names are equal or not
 		if (!(other instanceof Student)) {
 			return false;
 		}
@@ -28,13 +29,18 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
     private Solution() {
         //constructor is used.
     }
+    /**
+     * integer function.
+     *
+     * @param      stdin  The stdin
+     */
 	public static void executeListInteger(final Scanner stdin) {
 		List<Integer> l = new List();
         while (stdin.hasNext()) {
@@ -65,7 +71,8 @@ public class Solution {
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
-                        System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
+                        System.out.println(l.indexOf(
+                            Integer.parseInt(tokens[1])));
                     }
                 break;
                 case "get":
@@ -107,8 +114,9 @@ public class Solution {
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 case "equals":
                     if (tokens.length == 2) {
@@ -162,7 +170,8 @@ public class Solution {
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
-                        System.out.println(l.indexOf(Double.parseDouble(tokens[1])));
+                        System.out.println(l.indexOf(
+                            Double.parseDouble(tokens[1])));
                     }
                 break;
                 case "get":
@@ -191,8 +200,9 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Double[] a = new Double[t2.length];
-                        for (int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Double.parseDouble(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
@@ -302,8 +312,9 @@ public class Solution {
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
-                    if (object != null)
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 case "equals":
                     if (tokens.length == 2) {
@@ -411,6 +422,11 @@ public class Solution {
             }
         }
 	}
+    /**
+     * executelist.
+     *
+     * @param      stdin  The stdin
+     */
 	public static void executeListStudent(final Scanner stdin) {
 		List<Student> l = new List();
         while (stdin.hasNext()) {
