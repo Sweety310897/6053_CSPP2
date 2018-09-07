@@ -49,7 +49,7 @@ class Student {
      *
      * @return     returns 0.
      */
-    public int hashcode() {
+    public int hashCode() {
         return 0;
     }
     /**
