@@ -12,11 +12,11 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      newname  The name
      */
-    Student(final String name) {
+    Student(final String newname) {
     //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name = newname;
     }
     /**
      * Gets the name.
@@ -510,7 +510,7 @@ public final class Solution {
                         String[] t1 = tokens[1].split(",");
                         Student[] students = new Student[t1.length];
                         for (int i = 0; i < t1.length; i++) {
-                            students[i] = new Student(t1[i]);   
+                            students[i] = new Student(t1[i]);
                         }
                         l.removeAll(students);
                     }
