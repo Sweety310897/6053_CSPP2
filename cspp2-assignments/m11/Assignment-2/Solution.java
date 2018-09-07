@@ -263,7 +263,8 @@ public class Solution {
                 case "subList": {
                     if (tokens.length != 2) break;
                     String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
+                    List object = l.subList(Integer.parseInt(arrstring3[0]),
+                        Integer.parseInt(arrstring3[1]));
                     if (object != null) 
                         System.out.println(object);
                     break;
@@ -272,7 +273,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add(Float.parseFloat(lt[k]));
                         }
                         System.out.println(l.equals(l2));
@@ -284,10 +285,13 @@ public class Solution {
                 default:
                 break;
             }
-        }	
+        }
 	}
-
-    public static void executeListString(Scanner stdin) {
+    /**
+     * execute list string.
+     * @param      stdin  The stdin
+     */
+    public static void executeListString(final Scanner stdin) {
 		List<String> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -297,7 +301,7 @@ public class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(tokens[1]);
@@ -342,8 +346,10 @@ public class Solution {
                         l.removeAll(t2);
                     }
                 break;
-                case "subList": {
-                    if (tokens.length != 2) break;
+                case "subList":
+                    if (tokens.length != 2) {
+                        break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
@@ -351,7 +357,6 @@ public class Solution {
                         System.out.println(object);
                     }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
