@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
     /*
@@ -45,7 +48,7 @@ public class List {
      * currently it has 3 items.
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
-     * to be accessed by the methods that are outside of the List class. 
+     * to be accessed by the methods that are outside of the List class.
      */
     /**
      * list is private.
@@ -58,12 +61,15 @@ public class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
+    /**
+     * Constructs the object.
+     */
     public List() {
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
         // initialized with an array size like 10
-    	final int x = 10;
+        final int x = 10;
         list = new int[x];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -195,7 +201,7 @@ public class List {
         }
         str = str + list[i] + "]";
         return str;
-    } 
+    }
     /*
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
@@ -256,22 +262,22 @@ public class List {
      public void removeAll(final int[] newArray) {
         // write the logic
         // for (int i = 0; i < newArray.length; i++) {
-        // 	if(newArray[i] == list[i]) {
-        // 	}
+        //  if(newArray[i] == list[i]) {
+        //  }
         // }
         for (int i = 0; i < newArray.length; i++) {
-        	for (int j = 0; j < size; j++) {
-        		if (newArray[i] == list[j]) {
-        			remove(j);
-        			j--;
-        		}
-        	}
+            for (int j = 0; j < size; j++) {
+                if (newArray[i] == list[j]) {
+                    remove(j);
+                    j--;
+                }
+            }
         }
     }
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
-    second parameter indicates the endIndex. Returns null and print 
+    second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
@@ -283,16 +289,16 @@ public class List {
      */
     public List subList(final int start, final int end) {
     // write the logic for subList
-    	List newlist = new List();
-    	if (start <= 0 || end > size) {
-    		System.out.println("Index Out of Bounds Exception");
-    		return null;
-    	} else {
-    		for (int i = start; i < end; i++) {
-    		newlist.add(list[i]);
-    		}
-    		return newlist;
-    	}
+        List newlist = new List();
+        if (start <= 0 || end > size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        } else {
+            for (int i = start; i < end; i++) {
+            newlist.add(list[i]);
+            }
+            return newlist;
+        }
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -306,10 +312,10 @@ public class List {
      * @return     returns true.
      */
     public boolean equals(final List list1) {
-    	if (Arrays.equals(list1.list, list)) {
-    		return true;
-    	}
-    	return false;
+        if (Arrays.equals(list1.list, list)) {
+            return true;
+        }
+        return false;
     }
     /*
     * Removes all the elements from list
@@ -321,10 +327,10 @@ public class List {
      */
     public void clear() {
     // write the logic for clear.
-    	for (int i = 0; i < size; i++) {
-    		list[i] = 0;
-    	}
-    	size = 0;
+        for (int i = 0; i < size; i++) {
+            list[i] = 0;
+        }
+        size = 0;
     }
     /**
      * main function.
@@ -403,7 +409,7 @@ public class List {
                 break;
                 case "subList":
                     if (tokens.length != 2) {
-                    	break;
+                        break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
