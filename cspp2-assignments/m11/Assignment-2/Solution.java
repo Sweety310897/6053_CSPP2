@@ -1,7 +1,13 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
+/**
+ * Class for student.
+ */
 class Student {
+    /**
+     * String name.
+     */
     private String name;
     /**
      * Constructs the object.
@@ -29,6 +35,13 @@ class Student {
         }
         Student that = (Student) other;
         return this.getName().equals(that.getName());
+    }
+    /**
+     * hashcode function.
+     * @return     returns 0.
+     */
+    public int hashCode() {
+        return 0;
     }
     /**
      * Returns a string representation of the object.
