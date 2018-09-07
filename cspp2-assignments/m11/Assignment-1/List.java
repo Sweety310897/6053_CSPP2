@@ -103,8 +103,11 @@ public class List {
     /*
      * The size method returns the value of the size. The purpose of the method
      * is to announce the size of the list to the objects outside the list
-     *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * size function.
+     * @return     returns size.
      */
     public int size() {
         // replace the code below to implement the size method
@@ -205,7 +208,7 @@ public class List {
      *
      * @return     returns boolean value.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         return indexOf(item) == -1;
     }
@@ -234,11 +237,9 @@ public class List {
     */
     /**
      * Adds all.
-     *
      * @param      newArray  The new array
      */
-    public void addAll(final int[] newArray)
-    {
+    public void addAll(final int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             add(newArray[i]);
@@ -262,10 +263,11 @@ public class List {
         	for (int j = 0; j < size; j++) {
         		if (newArray[i] == list[j]) {
         			remove(j);
+        			j--;
         		}
         	}
         }
-     }
+    }
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
