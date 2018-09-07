@@ -219,6 +219,8 @@ public class List<E> {
     public boolean equals(List<E> listdata)
     {
         //return toString().equals(listdata.toString());
+        System.out.println(this.toString());
+        System.out.println(listdata.toString());
         return this.toString().equals(listdata.toString());
     }
     /*Removes all the elements from list*/
