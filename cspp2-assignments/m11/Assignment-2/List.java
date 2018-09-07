@@ -218,7 +218,11 @@ public class List<E> {
      */
     public boolean equals(List<E> listdata)
     {
-        return toString().equals(listdata.toString());
+        //return toString().equals(listdata.toString());
+        if (Arrays.equals(listdata.list, list)) {
+            return true;
+        }
+        return false;
     }
     /*Removes all the elements from list*/
     public void clear()
