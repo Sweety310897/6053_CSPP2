@@ -272,9 +272,7 @@ public class List {
     		list[i] = 0;
     	}
     	size = 0;
-
     }
-
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -345,12 +343,15 @@ public class List {
                     }
                 break;
                 case "subList": {
-                    if (tokens.length != 2) break;
+                    if (tokens.length != 2) {
+                    	break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 }
                 case "equals":
