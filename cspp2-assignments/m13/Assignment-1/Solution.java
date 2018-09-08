@@ -41,7 +41,6 @@ class Set {
     public void add(int[] intarray) {
         for(int i = 0; i < intarray.length; i++) {
             add(intarray[i]);
-            size++;
         }
     }
     public void add(int item) {
