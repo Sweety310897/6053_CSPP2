@@ -37,6 +37,7 @@ class Set {
         }
         return -1;
     }
+
     public void add(int[] intarray) {
         for(int i = 0; i < intarray.length; i++) {
             add(intarray[i]);
@@ -49,7 +50,7 @@ class Set {
     }
     public String toString() {
         if (size == 0) {
-            return "[]";
+            return "{}";
         }
         String str = "[";
         int i = 0;
