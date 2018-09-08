@@ -45,7 +45,6 @@ class Set {
         }
     }
     public void add(int item) {
-        size = 0;
         if(size < set.length) {
             set[size++] = item;
         }
