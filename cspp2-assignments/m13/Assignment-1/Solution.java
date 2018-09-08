@@ -18,7 +18,7 @@ class Set {
     }
     // public void add(int[] item) {
     //     if (size < set.length) {
-    //         set[size++] = item[];
+    //         set[size++] = item;
     //     } else {
     //         resize(item);
     //     }
@@ -54,7 +54,7 @@ class Set {
         }
         String str = "{";
         int i = 0;
-        for(i = 0; i< size -1;i++) {
+        for(i = 0; i < size -1;i++) {
             str = str + set[i] + ",";
         }
         str = str + set[i] + "}";
