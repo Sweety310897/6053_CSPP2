@@ -12,7 +12,7 @@ class Set {
     private int[] set;
     private int size;
     public Set() {
-        final int x = 10;
+        final int x = 50;
         set = new int[x];
         size = 0;
     }
