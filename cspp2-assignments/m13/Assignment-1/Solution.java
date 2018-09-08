@@ -40,6 +40,7 @@ class Set {
 
     public void add(int[] intarray) {
         for(int i = 0; i < intarray.length; i++) {
+            size = 0;
             add(intarray[i]);
         }
     }
@@ -54,7 +55,7 @@ class Set {
         }
         String str = "{";
         int i = 0;
-        for(i = 0; i < size -1;i++) {
+        for(i = 0; i < size -1; i++) {
             str = str + set[i] + ",";
         }
         str = str + set[i] + "}";
