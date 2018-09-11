@@ -2,6 +2,11 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 class SortedSet extends Set {
+    /**
+     * sort function.
+     *
+     * @param      array  The array
+     */
     public void sort(final int[] array) {
         int temp;
         for (int i = 0; i < size; i++) {
@@ -14,12 +19,25 @@ class SortedSet extends Set {
             }
         }
     }
+    /**
+     * add function.
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         if (!contains(item)) {
             set[size++] = item;
         }
         sort(set);
     }
+    /**
+     * subset
+     *
+     * @param      start  The start
+     * @param      end    The end
+     *
+     * @return     from start to end returns elements.
+     */
     public int[] subSet(final int start, final int end) {
         if (start > end) {
             System.out.println("Invalid Arguments to Subset Exception");
@@ -39,6 +57,13 @@ class SortedSet extends Set {
         }
         return Arrays.copyOf(result, k);
     }
+    /**
+     * headset function.
+     *
+     * @param      end   The end
+     *
+     * @return     returms elements.
+     */
     public int[] headSet(final int end) {
         int[] result = new int[size];
         int temp = 0;
@@ -50,6 +75,11 @@ class SortedSet extends Set {
         }
         return Arrays.copyOf(result, temp);
     }
+    /**
+     * last function.
+     *
+     * @return     returns list of elements.
+     */
     public int last() {
         if (size == 0) {
             System.out.println("Set Empty Exception");
@@ -57,6 +87,11 @@ class SortedSet extends Set {
         }
         return set[size - 1];
     }
+    /**
+     * Adds all.
+     *
+     * @param      element  The element
+     */
     public void addAll(final int[] element) {
         for (int i : element) {
             this.add(i);
