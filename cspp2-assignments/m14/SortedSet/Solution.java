@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for sorted set.
+ */
 class SortedSet extends Set {
     /**
      * sort function.
@@ -31,7 +34,7 @@ class SortedSet extends Set {
         sort(set);
     }
     /**
-     * subset
+     * subset.
      *
      * @param      start  The start
      * @param      end    The end
