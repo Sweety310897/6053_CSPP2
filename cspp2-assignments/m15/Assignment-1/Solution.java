@@ -298,7 +298,7 @@ public class Solution {
             
         }
         catch(Exception e) {
-            System.out.println("IndexOutOfBoundsException");
+            System.out.println("Index Out Of Bounds Exception");
         }
         // if (start <= 0 || end > size) {
         //     System.out.println("Index Out of Bounds Exception");
