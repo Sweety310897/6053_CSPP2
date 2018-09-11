@@ -294,12 +294,12 @@ public class Solution {
             for (int i = start; i < end; i++) {
              newlist.add(list[i]);
             }
-            //return newlist;
+            return newlist;
             
         }
         catch(Exception e) {
             System.out.println("Index Out of Bounds Exception");
-            return null;
+            //return null;
         }
         // if (start <= 0 || end > size) {
         //     System.out.println("Index Out of Bounds Exception");
@@ -310,7 +310,7 @@ public class Solution {
         //     }
         //     return newlist;
         // }
-        return newlist;
+        return null;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
