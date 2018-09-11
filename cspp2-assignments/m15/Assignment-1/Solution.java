@@ -294,7 +294,7 @@ public class Solution {
             for (int i = start; i < end; i++) {
              newlist.add(list[i]);
             }
-            return newlist;
+            //return newlist;
             
         }
         catch(Exception e) {
