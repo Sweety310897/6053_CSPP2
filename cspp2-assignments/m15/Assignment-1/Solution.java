@@ -290,27 +290,24 @@ public class Solution {
     public Solution subList(final int start, final int end) {
     // write the logic for subList
         Solution newlist = new Solution();
-        try {
+        // try {
+        //     for (int i = start; i < end; i++) {
+        //      newlist.add(list[i]);
+        //      }
+        //      return newlist;
+        // }
+        // catch(Exception e) {
+        //     System.out.println("IndexOutOfBoundsException");
+        // }
+        if (start <= 0 || end > size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        } else {
             for (int i = start; i < end; i++) {
-             newlist.add(list[i]);
+            newlist.add(list[i]);
             }
             return newlist;
-            
         }
-        catch(Exception e) {
-            System.out.println("Index Out of Bounds Exception");
-            //return null;
-        }
-        // if (start <= 0 || end > size) {
-        //     System.out.println("Index Out of Bounds Exception");
-        //     return null;
-        // } else {
-        //     for (int i = start; i < end; i++) {
-        //     newlist.add(list[i]);
-        //     }
-        //     return newlist;
-        // }
-        return null;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
