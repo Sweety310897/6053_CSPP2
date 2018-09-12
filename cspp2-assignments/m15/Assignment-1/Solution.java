@@ -142,7 +142,15 @@ public class Solution {
      *
      * @param      index  The index
      */
-    public void remove (final int index) throws InvalidPositionException {
+    /**
+     * void remove
+     *
+     * @param      index                     The index
+     *
+     * @throws     InvalidPositionException  Invalid position Exception.
+     */
+    public void remove (final int index)
+    throws InvalidPositionException {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -265,7 +273,15 @@ public class Solution {
       * Removes all.
       * @param      newArray  The new array
       */
-     public void removeAll(final int[] newArray) throws InvalidPositionException {
+    /**
+     * Removes all.
+     *
+     * @param      newArray                  The new array
+     *
+     * @throws     InvalidPositionException  invalid position exception.
+     */
+     public void removeAll(final int[] newArray) throws
+     InvalidPositionException {
         // write the logic
         // for (int i = 0; i < newArray.length; i++) {
         //  if(newArray[i] == list[i]) {
@@ -276,7 +292,7 @@ public class Solution {
                 for (int j = 0; j < size; j++) {
                     if (newArray[i] == list[j]) {
                         remove(j);
-                        j--;    
+                        j--;
                     }
                 }
             }
@@ -297,7 +313,15 @@ public class Solution {
      * @param      end    The end
      * @return     returns newlist.
      */
-    public Solution subList(final int start, final int end) throws InvalidPositionException {
+    /**
+     * subList
+     * @param      start                     The start
+     * @param      end                       The end
+     * @return     returns list of elements.
+     * @throws     InvalidPositionException  Invalid position eception.
+     */
+    public Solution subList(final int start, final int end) throws
+    InvalidPositionException {
     // write the logic for subList
         Solution newlist = new Solution();
         // try {
@@ -468,7 +492,6 @@ public class Solution {
                 } catch (InvalidPositionException e) {
                     System.out.println(e.getMessage());
                 }
-                    
                     break;
                 case "equals":
                     if (tokens.length == 2) {
