@@ -105,6 +105,15 @@ class SortedSet extends Set {
      *
      * @return     returms elements.
      */
+    /**
+     * headset.
+     *
+     * @param      end             The end
+     *
+     * @return     returns list of elements.
+     *
+     * @throws     EmptyException  Exception.
+     */
     public int[] headSet(final int end) throws EmptyException {
         int[] result = new int[size];
         int temp = 0;
