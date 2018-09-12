@@ -4,6 +4,11 @@ import java.util.Arrays;
 /**
  * List of .
  */
+class InvalidPositionException extends Exception {
+    InvalidPositionException(String s) {
+        super(s);
+    }
+}
 public class Solution {
     //Implement all the methods mentioned to build a ListADT
     /*
@@ -137,7 +142,7 @@ public class Solution {
      *
      * @param      index  The index
      */
-    public void remove(final int index) {
+    public void remove (final int index) throws InvalidPositionException {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -146,7 +151,8 @@ public class Solution {
             }
             size--;
         } else {
-            System.out.println("Invalid Position Exception");
+            // System.out.println("Invalid Position Exception");
+            throw new InvalidPositionException("Invalid Position Exception");
         }
     }
     /*
@@ -265,11 +271,17 @@ public class Solution {
         //  if(newArray[i] == list[i]) {
         //  }
         // }
+        
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size; j++) {
                 if (newArray[i] == list[j]) {
+                    try {
                     remove(j);
-                    j--;
+                    j--;    
+                } catch(InvalidPositionException e){
+                    System.out.println(e.getMessage());
+                    
+                }
                 }
             }
         }
@@ -287,7 +299,7 @@ public class Solution {
      * @param      end    The end
      * @return     returns newlist.
      */
-    public Solution subList(final int start, final int end) {
+    public Solution subList(final int start, final int end) throws InvalidPositionException {
     // write the logic for subList
         Solution newlist = new Solution();
         // try {
@@ -300,8 +312,9 @@ public class Solution {
         //     System.out.println("IndexOutOfBoundsException");
         // }
         if (start <= 0 || end > size) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
+            throw new InvalidPositionException("Index Out of Bounds Exception");
+            //System.out.println("Index Out of Bounds Exception");
+            //return null;
         } else {
             for (int i = start; i < end; i++) {
             newlist.add(list[i]);
@@ -395,8 +408,10 @@ public class Solution {
                     System.out.println(l);
                 break;
                 case "remove":
-                    if (tokens.length == 2) {
+                    try {
                         l.remove(Integer.parseInt(tokens[1]));
+                    } catch (InvalidPositionException e) {
+                        System.out.println(e.getMessage());
                     }
                 break;
                 case "indexOf":
@@ -428,16 +443,19 @@ public class Solution {
                     }
                 break;
                 case "removeAll":
-                    if (tokens.length == 2) {
+                    try {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
                         for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
                         }
                         l.removeAll(a);
+                    } catch (Exception e) {
+                        System.out.println("Index Out Of Bounds Exception");
                     }
                 break;
                 case "subList":
+                try {
                     if (tokens.length != 2) {
                         break;
                     }
@@ -447,6 +465,10 @@ public class Solution {
                     if (object != null) {
                         System.out.println(object);
                     }
+                } catch (InvalidPositionException e) {
+                    System.out.println(e.getMessage());
+                }
+                    
                     break;
                 case "equals":
                     if (tokens.length == 2) {
