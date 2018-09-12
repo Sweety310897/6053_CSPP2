@@ -87,7 +87,7 @@ class SortedSet extends Set {
             }
         }
         if (temp == 0) {
-        	throw new EmptyException("Set Empty Exceptions");
+        	throw new EmptyException("Set Empty Exception");
         }
         return Arrays.copyOf(result, temp);
     }
