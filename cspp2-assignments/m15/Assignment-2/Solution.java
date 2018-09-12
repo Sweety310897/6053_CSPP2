@@ -217,9 +217,7 @@ public final class Solution {
                 }
             } catch (InvalidsubsetException e) {
             	System.out.println(e.getMessage());
-            	//flag = 1;
             }
-                
                 break;
             case "headSet":
             try {
@@ -235,7 +233,6 @@ public final class Solution {
             	System.out.println(e.getMessage());
 
             }
-                
                 break;
             case "last":
             try {
@@ -244,7 +241,7 @@ public final class Solution {
                 }
                 int temp = s.last();
                 System.out.println(temp);
-            } catch(EmptyException e) {
+            } catch (EmptyException e) {
             	System.out.println(e.getMessage());
             }
             break;
