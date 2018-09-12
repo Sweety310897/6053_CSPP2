@@ -265,25 +265,23 @@ public class Solution {
       * Removes all.
       * @param      newArray  The new array
       */
-     public void removeAll(final int[] newArray) {
+     public void removeAll(final int[] newArray) throws InvalidPositionException {
         // write the logic
         // for (int i = 0; i < newArray.length; i++) {
         //  if(newArray[i] == list[i]) {
         //  }
         // }
-        
-        for (int i = 0; i < newArray.length; i++) {
-            for (int j = 0; j < size; j++) {
-                if (newArray[i] == list[j]) {
-                    try {
-                    remove(j);
-                    j--;    
-                } catch(InvalidPositionException e){
-                    System.out.println(e.getMessage());
-                    
-                }
+        if (newArray.length < list.length) {
+            for (int i = 0; i < newArray.length; i++) {
+                for (int j = 0; j < size; j++) {
+                    if (newArray[i] == list[j]) {
+                        remove(j);
+                        j--;    
+                    }
                 }
             }
+        } else {
+            throw new InvalidPositionException("Index Position Exception");
         }
     }
     /*
@@ -444,14 +442,16 @@ public class Solution {
                 break;
                 case "removeAll":
                     try {
-                        String[] t2 = tokens[1].split(",");
-                        int[] a = new int[t2.length];
-                        for (int i = 0; i < t2.length; i++) {
-                            a[i] = Integer.parseInt(t2[i]);
+                        if (tokens.length == 2) {
+                            String[] t2 = tokens[1].split(",");
+                            int[] a = new int[t2.length];
+                            for (int i = 0; i < t2.length; i++) {
+                                a[i] = Integer.parseInt(t2[i]);
+                            }
+                            l.removeAll(a);
                         }
-                        l.removeAll(a);
-                    } catch (Exception e) {
-                        System.out.println("Index Out Of Bounds Exception");
+                    } catch (InvalidPositionException e) {
+                        System.out.println(e.getMessage());
                     }
                 break;
                 case "subList":
