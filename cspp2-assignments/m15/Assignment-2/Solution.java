@@ -10,17 +10,20 @@ class InvalidsubsetException extends Exception {
      *
      * @param      s     string parameter.
      */
-    InvalidsubsetException(String s) {
+    InvalidsubsetException(final String s) {
         super(s);
     }
 }
+/**
+ * Exception for signaling empty errors.
+ */
 class EmptyException extends Exception {
     /**
      * Constructs the object.
      *
      * @param      s     String parameter.
      */
-    EmptyException(String s) {
+    EmptyException(final String s) {
         super(s);
     }
 }
@@ -64,10 +67,21 @@ class SortedSet extends Set {
      *
      * @return     from start to end returns elements.
      */
+    /**
+     * subset.
+     *
+     * @param      start                   The start
+     * @param      end                     The end
+     *
+     * @return     returns list of elements.
+     *
+     * @throws     InvalidsubsetException  exception.
+     */
     public int[] subSet(final int start, final int end) throws
     InvalidsubsetException {
         if (start > end) {
-            throw new InvalidsubsetException("Invalid Arguments to Subset Exception");
+            throw new InvalidsubsetException(
+                "Invalid Arguments to Subset Exception");
             //return null;
         }
         int[] result = new int[size];
