@@ -4,12 +4,18 @@ import java.util.Arrays;
 /**
  * List of .
  */
+/**
+ * Exception for signaling invalid position errors.
+ */
 class InvalidPositionException extends Exception {
-    InvalidPositionException(String s) {
+    InvalidPositionException(final String s) {
         super(s);
     }
 }
-public class Solution {
+/**
+ * class Solution.
+ */
+public final class Solution {
     //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
@@ -143,13 +149,13 @@ public class Solution {
      * @param      index  The index
      */
     /**
-     * void remove
+     * void remove.
      *
      * @param      index                     The index
      *
      * @throws     InvalidPositionException  Invalid position Exception.
      */
-    public void remove (final int index)
+    public void remove(final int index)
     throws InvalidPositionException {
         // write the logic for remove here. Think about what to do to the size
         // variable.
@@ -314,7 +320,7 @@ public class Solution {
      * @return     returns newlist.
      */
     /**
-     * subList
+     * subList.
      * @param      start                     The start
      * @param      end                       The end
      * @return     returns list of elements.
