@@ -1,15 +1,28 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Exception for signaling invalidsubset errors.
+ */
 class InvalidsubsetException extends Exception {
-	InvalidsubsetException(String s) {
-		super(s);
-	}
+    /**
+     * Constructs the object.
+     *
+     * @param      s     string parameter.
+     */
+    InvalidsubsetException(String s) {
+        super(s);
+    }
 }
 class EmptyException extends Exception {
-	EmptyException(String s) {
-		super(s);
-	}
+    /**
+     * Constructs the object.
+     *
+     * @param      s     String parameter.
+     */
+    EmptyException(String s) {
+        super(s);
+    }
 }
 /**
  * Class for sorted set.
@@ -51,7 +64,8 @@ class SortedSet extends Set {
      *
      * @return     from start to end returns elements.
      */
-    public int[] subSet(final int start, final int end) throws InvalidsubsetException {
+    public int[] subSet(final int start, final int end) throws
+    InvalidsubsetException {
         if (start > end) {
             throw new InvalidsubsetException("Invalid Arguments to Subset Exception");
             //return null;
@@ -77,7 +91,7 @@ class SortedSet extends Set {
      *
      * @return     returms elements.
      */
-    public int[] headSet(final int end) throws EmptyException{
+    public int[] headSet(final int end) throws EmptyException {
         int[] result = new int[size];
         int temp = 0;
         for (int i = 0; i < size; i++) {
@@ -87,7 +101,7 @@ class SortedSet extends Set {
             }
         }
         if (temp == 0) {
-        	throw new EmptyException("Set Empty Exception");
+            throw new EmptyException("Set Empty Exception");
         }
         return Arrays.copyOf(result, temp);
     }
@@ -95,6 +109,13 @@ class SortedSet extends Set {
      * last function.
      *
      * @return     returns list of elements.
+     */
+    /**
+     * last function.
+     *
+     * @return     set of elements.
+     *
+     * @throws     EmptyException  Emptyset exception.
      */
     public int last() throws EmptyException {
         if (size == 0) {
@@ -205,7 +226,7 @@ public final class Solution {
                 break;
             case "subSet":
             try {
-            	if (tokens.length != 2) {
+                if (tokens.length != 2) {
                     break;
                 }
                 String[] arrstring3 = tokens[1].split(",");
@@ -216,12 +237,12 @@ public final class Solution {
                         "{").replace("]", "}"));
                 }
             } catch (InvalidsubsetException e) {
-            	System.out.println(e.getMessage());
+                System.out.println(e.getMessage());
             }
                 break;
             case "headSet":
             try {
-            	if (tokens.length != 2) {
+                if (tokens.length != 2) {
                     break;
                 }
                 int[] obj = s.headSet(Integer.parseInt(tokens[1]));
@@ -229,20 +250,20 @@ public final class Solution {
                     System.out.println(Arrays.toString(obj).replace("[",
                         "{").replace("]", "}"));
                 }
-            } catch(EmptyException e) {
-            	System.out.println(e.getMessage());
+            } catch (EmptyException e) {
+                System.out.println(e.getMessage());
 
             }
                 break;
             case "last":
             try {
-            	if (tokens.length != 1) {
+                if (tokens.length != 1) {
                     break;
                 }
                 int temp = s.last();
                 System.out.println(temp);
             } catch (EmptyException e) {
-            	System.out.println(e.getMessage());
+                System.out.println(e.getMessage());
             }
             break;
             case "addAll":
