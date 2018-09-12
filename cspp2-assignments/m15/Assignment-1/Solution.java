@@ -8,6 +8,11 @@ import java.util.Arrays;
  * Exception for signaling invalid position errors.
  */
 class InvalidPositionException extends Exception {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     S is the string.
+     */
     InvalidPositionException(final String s) {
         super(s);
     }
