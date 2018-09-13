@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 class BookYourShow {
     public void addAShow(Show show) {
 
@@ -47,14 +48,12 @@ public final class Solution {
         BookYourShow bys = new BookYourShow();
         Scanner scan = new Scanner(System.in);
         int testCases = Integer.parseInt(scan.nextLine());
-        //System.out.println("trstcases" + testCases);
         for (int i = 0; i < testCases; i++) {
             String[] tokens = scan.nextLine().
                 replace("[", "").replace("]", "").split(",");
-            System.out.println(tokens);
-            System.out.println(tokens);    
+            System.out.println(Arrays.toString(tokens));    
             String[] check = tokens[0].split(" ");
-            System.out.println(check);
+            System.out.println(Arrays.toString(check));
             switch (check[0]) {
                 case "add":
                     int k = 2;
