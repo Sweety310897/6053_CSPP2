@@ -47,10 +47,11 @@ public final class Solution {
         BookYourShow bys = new BookYourShow();
         Scanner scan = new Scanner(System.in);
         int testCases = Integer.parseInt(scan.nextLine());
-        System.out.println("trstcases" + testCases);
+        //System.out.println("trstcases" + testCases);
         for (int i = 0; i < testCases; i++) {
             String[] tokens = scan.nextLine().
                 replace("[", "").replace("]", "").split(",");
+            System.out.println(tokens);
             System.out.println(tokens);    
             String[] check = tokens[0].split(" ");
             System.out.println(check);
