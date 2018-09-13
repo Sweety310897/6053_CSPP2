@@ -51,9 +51,9 @@ public final class Solution {
         for (int i = 0; i < testCases; i++) {
             String[] tokens = scan.nextLine().
                 replace("[", "").replace("]", "").split(",");
-            System.out.println(Arrays.toString(tokens));    
+            System.out.println(Arrays.toString(tokens) + "tokens values");    
             String[] check = tokens[0].split(" ");
-            System.out.println(Arrays.toString(check));
+            System.out.println(Arrays.toString(check) + "check values");
             switch (check[0]) {
                 case "add":
                     int k = 2;
