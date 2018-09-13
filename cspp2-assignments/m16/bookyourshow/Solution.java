@@ -58,6 +58,7 @@ public final class Solution {
                 case "add":
                     int k = 2;
                     String[] seats = new String[tokens.length - 2];
+                    System.out.println(Arrays.toString(seats) + "seats");
                     for (int j = 0; j < seats.length; j++) {
                         seats[j] = tokens[k++];
                     }
