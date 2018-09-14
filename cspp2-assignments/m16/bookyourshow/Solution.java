@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for show.
+ */
 class Show {
     /**
      * moviename description.
@@ -16,7 +19,7 @@ class Show {
     /**
      * Constructs the object.
      *
-     * @param      mvenam   The mvenam
+     * @param      mve_nam   The mve_nam
      * @param      showdat  The showdat
      * @param      seats1   The seats 1
      */
