@@ -19,12 +19,12 @@ class Show {
     /**
      * Constructs the object.
      *
-     * @param      mve_nam   The mve_nam
+     * @param      mvenam   The mve_nam
      * @param      showdat  The showdat
      * @param      seats1   The seats 1
      */
-    Show(final String mve_nam, final String showdat, final String[] seats1) {
-        this.moviename = mve_nam;
+    Show(final String mvenam, final String showdat, final String[] seats1) {
+        this.moviename = mvenam;
         this.showdate = showdat;
         this.seats = seats1;
     }
@@ -233,7 +233,7 @@ class BookYourShow {
      *
      * @param      moviename  The moviename
      * @param      showdate   The showdate
-     * @param      p          { parameter_description }
+     * @param      p          patron
      */
     public void bookAShow(final String moviename,
         final String showdate, final Patron p) {
