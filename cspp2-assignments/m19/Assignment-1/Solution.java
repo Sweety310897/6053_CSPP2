@@ -1,9 +1,19 @@
 import java.util.Scanner;
 import java.util.Arrays;
 class Quiz {
-	public String[] question;
+	public String questiontext;
+	public String answer;
+	public String[] choices;
+	public int marks;
 	Quiz() {
-		this.question = question;
+
+	}
+ 	Quiz(String data) { 
+		this.questiontext = data;
+		//System.out.println(questiontext);
+		//System.out.println(data);
+		this.answer = answer;
+		this.choices = choices;
 	}
 }
 /**
@@ -32,6 +42,7 @@ public final class Solution {
             String line = s.nextLine();
              // split the line using space
             String[] tokens = line.split(" ");
+            System.out.println(Arrays.toString(tokens));
               // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
@@ -69,12 +80,13 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         // int questionCount = Integer.parseInt(s.nextLine());
+        System.out.println(questionCount + " are added to the quiz");
+        for (int i = 0; i < 4; i++) {
+        	String temp = s.nextLine();
+        	String[] data = temp.split(":");
+        //System.out.println(data[0] + "data0");
+        }
         
-        System.out.println(questionCount + "questionCount");
-        // for (int i = 0; i < questionCount; i++) {
-        // 	String[] temp = quiz.split(":");
-        // }
-        // System.out.println(Arrays.toString(temp));
     }
 
     /**
@@ -88,6 +100,12 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+    	// for(int i = 0; i < answerCount; i++) {
+    	// 	System.out.println();
+    	// 	String temp1 = s.nextLine();
+    	// }
+    	
+    	
     }
 
     /**
@@ -97,5 +115,6 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
+
     }
 }
