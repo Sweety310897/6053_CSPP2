@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 class Quiz {
 
 }
@@ -64,10 +65,9 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        //String[] questions = s.nextLine();
-        System.out.println(s);
-        System.out.println(quiz);
-        System.out.println(questionCount);
+        String questions = s.nextLine();
+        //System.out.println(data + "data");
+
     }
 
     /**
