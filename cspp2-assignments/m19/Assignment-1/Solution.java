@@ -1,7 +1,10 @@
 import java.util.Scanner;
 import java.util.Arrays;
 class Quiz {
-
+	public String[] question;
+	Quiz() {
+		this.question = question;
+	}
 }
 /**
  * Solution class for code-eval.
@@ -65,11 +68,13 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        //String[] tokens = question.split(":");
-        System.out.println(quiz);
-        //System.out.println(Arrays.toString(questions));
-        //System.out.println(data + "data");
-
+        // int questionCount = Integer.parseInt(s.nextLine());
+        
+        System.out.println(questionCount + "questionCount");
+        // for (int i = 0; i < questionCount; i++) {
+        // 	String[] temp = quiz.split(":");
+        // }
+        // System.out.println(Arrays.toString(temp));
     }
 
     /**
