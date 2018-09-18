@@ -289,6 +289,11 @@ public final class Solution {
             Question q1 = new Question(text, choices, answer, maxmarks, penalty);
             quiz.addQuestion(q1);
         }
+        if (quiz.getQuizSize() == 0) {
+            System.out.println("Quiz does not have questions");
+        } else {
+            System.out.println(q + " are added to the quiz");
+        }
     }
     /**
      * Starts a quiz.
@@ -302,6 +307,13 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+        if (quiz.getQuizSize()==0) {
+        	return;
+        }
+        if (quiz.getFlag() == 1) {
+        	return;
+        }
+        Scanner sc1 = scan;
         Question[] ques = quiz.getQuestions();
         for (int j = 0; j < quiz.getQuizSize(); j++) {
         	Question q1 = ques[j];
