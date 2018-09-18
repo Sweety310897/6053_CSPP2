@@ -401,6 +401,12 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
+    	if (quiz.getQuizSize() == 0) {
+    		return;
+    	}
+    	if (quiz.getFlag() == 1) {
+    		return;
+    	}
     	int total = 0;
         Question[] quest = quiz.getQuestions();
         for (int i = 0; i < quiz.getQuizSize(); i++) {
