@@ -317,10 +317,10 @@ public final class Solution {
         Question[] ques = quiz.getQuestions();
         for (int j = 0; j < quiz.getQuizSize(); j++) {
         	Question q1 = ques[j];
-        	System.out.println(q1.getQuestionText() + "(" 
-        		+ q1.getMaxMarks() + ")");
+        	System.out.println(q1.getQuestionText() + 
+        		"(" + q1.getMaxMarks() + ")");
         	String[] choose = q1.getChoice();
-        	for (int i = 0; i < choose.length - 1; i++) {
+        	for (int i = 0; i < choose.length; i++) {
         		if (i == choose.length - 1) {
         			System.out.println(choose[i]);
         		} else {
