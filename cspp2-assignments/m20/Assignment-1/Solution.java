@@ -129,7 +129,7 @@ class Question {
         String s = "";
         s = s + getQuestionText();
         boolean eval = evaluateResponse(response);
-        if (eval == true) {
+        if (eval) {
             s = s + "\n" + " Correct Answer! - Marks Awarded: "
             + getMaxMarks();
         } else {
