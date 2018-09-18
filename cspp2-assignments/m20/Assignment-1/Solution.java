@@ -197,8 +197,8 @@ class Quiz {
     /**
      * Constructs the object.
      */
-    final int hundred = 100;
     Quiz() {
+        final int hundred = 100;
         questions = new Question[hundred];
         size = 0;
     }
@@ -355,7 +355,6 @@ public final class Solution {
                 System.out.println("number is out of range for " + text);
                 return;
             }
-            
             final int three = 3;
             int maxmarks = Integer.parseInt(tokens[three]);
             if (maxmarks < 0) {
