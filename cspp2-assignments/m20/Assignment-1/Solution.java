@@ -277,15 +277,59 @@ public final class Solution {
         for (int temp = 0; temp < q; temp++) {
         	String input = scan.nextLine();
         	String[] tokens = input.split(":");
+        	final int five = 5;
+        	if (tokens.length != five) {
+                System.out.println("Error! Malformed question");
+                return;
+            } else {
+                for (String r : tokens) {
+                    // System.out.println(r);
+                    if (r.equals("")) {
+                        System.out.println("Error! Malformed question");
+                        return;
+                    }
+                }
+            }
         	String text = tokens[0];
         	//System.out.println(tokens[0] + "tokens0");
         	//System.out.println(tokens[1] + "tokens1");
         	//System.out.println(text);
             String[] choices = tokens[1].split(",");
             //System.out.println(Arrays.toString(choices));
-            int answer = Integer.parseInt(tokens[2]);
-            int maxmarks = Integer.parseInt(tokens[3]);
-            int penalty = Integer.parseInt(tokens[4]);
+            final int four = 4;
+            final int two = 2;
+            if (choices.length > four) {
+            	quiz.flaglength(1);
+            	System.out.print("trick question  does not have ");
+                System.out.println("enough answer choices");
+                return;
+            }
+            if (choices.length < two) {
+                System.out.print(text + " does not ");
+                System.out.println("have enough answer choices");
+                return;
+            }
+            int answer = Integer.parseInt(tokens[two]);
+            final int four1 = 4;
+            if (answer < 0 || answer > four1) {
+                quiz.setFlag(1);
+                System.out.print("Error! Correct answer choice ");
+                System.out.println("number is out of range for " + text);
+                return;
+            }
+            
+            final int three = 3;
+            int maxmarks = Integer.parseInt(tokens[three]);
+            if (maxmarks < 0) {
+                System.out.println("Invalid max marks for " + text);
+                return;
+            }
+            final int four2 = 4;
+            int penalty = Integer.parseInt(tokens[four2]);
+            if (penalty > 0) {
+                System.out.println("Invalid penalty for " + text);
+                return;
+            }
             Question q1 = new Question(text, choices, answer, maxmarks, penalty);
             quiz.addQuestion(q1);
         }
