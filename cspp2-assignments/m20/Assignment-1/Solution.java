@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Arrays;
+//import java.util.Arrays;
 /**
  * Class for question.
  */
@@ -158,18 +158,41 @@ class Quiz {
      */
     private int flag = 0;
     private int flaglength = 0;
+    /**
+     * Sets the flag.
+     *
+     * @param      val   The value
+     */
     public void setFlag(final int val) {
     	flag = val;
     }
+    /**
+     * Gets the flag.
+     *
+     * @return     The flag.
+     */
     public int getFlag() {
     	return flag;
     }
+    /**
+     * flag length.
+     *
+     * @param      val   The value
+     */
     public void flaglength(final int val) {
     	flaglength = val;
     }
+    /**
+     * flaglength.
+     *
+     * @return     returns flaglength.
+     */
     public int flaglength() {
     	return flaglength;
     }
+    /**
+     * Constructs the object.
+     */
     Quiz() {
     	questions = new Question[100];
     	size = 0;
@@ -182,9 +205,19 @@ class Quiz {
     public int getQuizSize() {
     	return size;
     }
+    /**
+     * Gets the questions.
+     *
+     * @return     The questions.
+     */
     public Question[] getQuestions() {
     	return questions;
     }
+    /**
+     * Adds a question.
+     *
+     * @param      q     The quarter
+     */
     public void addQuestion(final Question q) {
     	//System.out.println(Question + "ques");
     	questions[size++] = q;
@@ -341,7 +374,6 @@ public final class Solution {
     }
     /**
      * Starts a quiz.
-     *
      * @param      scan  The scan
      * @param      quiz  The quiz
      * @param      q     The answer count
