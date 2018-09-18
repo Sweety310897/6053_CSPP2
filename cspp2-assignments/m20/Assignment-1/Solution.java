@@ -313,24 +313,41 @@ public final class Solution {
         if (quiz.getFlag() == 1) {
         	return;
         }
-        Scanner sc1 = scan;
         Question[] ques = quiz.getQuestions();
-        for (int j = 0; j < quiz.getQuizSize(); j++) {
-        	Question q1 = ques[j];
-        	System.out.println(q1.getQuestionText() + 
-        		"(" + q1.getMaxMarks() + ")");
-        	String[] choose = q1.getChoice();
-        	for (int i = 0; i < choose.length; i++) {
-        		if (i == choose.length - 1) {
-        			System.out.println(choose[i]);
-        		} else {
-        			System.out.println(choose[i] + "\t");
-        		}
-        	}
-        	System.out.println("\n");
-        	String response = scan.nextLine();
-        	q1.setResponse(response);
-        }
+            for (int j = 0; j < quiz.getQuizSize(); j++) {
+                Question q1 = ques[j];
+                System.out.println(q1.getQuestionText()
+                    + "(" + q1.getMaxMarks() + ")");
+                String[] chose = q1.getChoice();
+                for (int i = 0; i < chose.length; i++) {
+                    if (i == chose.length - 1) {
+                        System.out.print(chose[i]);
+                    } else {
+                        System.out.print(chose[i] + "\t");
+                    }
+                }
+                System.out.println("\n");
+                String response = scan.nextLine();
+                q1.setResponse(response);
+            }
+        // Scanner sc1 = scan;
+        // Question[] ques = quiz.getQuestions();
+        // for (int j = 0; j < quiz.getQuizSize(); j++) {
+        // 	Question q1 = ques[j];
+        // 	System.out.println(q1.getQuestionText() + 
+        // 		"(" + q1.getMaxMarks() + ")");
+        // 	String[] choose = q1.getChoice();
+        // 	for (int i = 0; i < choose.length; i++) {
+        // 		if (i == choose.length - 1) {
+        // 			System.out.println(choose[i]);
+        // 		} else {
+        // 			System.out.println(choose[i] + "\t");
+        // 		}
+        // 	}
+        // 	System.out.println("\n");
+        // 	String response = scan.nextLine();
+        // 	q1.setResponse(response);
+        // }
 
     }
     /**
