@@ -9,7 +9,14 @@ class Text {
 		this.text1 = t1;
 		this.text2 = t2;
 	}
-	public static String TextToString(File text) {
+	/**
+	 * texttostring.
+	 *
+	 * @param      text  The text
+	 *
+	 * @return     String.
+	 */
+	public static String TextToString(final File text) {
 		String string = "";
 		try {
 			Scanner scan = new Scanner(new FileReader(text));
@@ -20,25 +27,40 @@ class Text {
 			}
 			scan.close();
 			string = sbuilder.toString();
-		} catch(FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 			System.out.println("no file");
 		}
 		return string;
 	}
+	/**
+	 * removablewords.
+	 *
+	 * @param      text  The text
+	 *
+	 * @return     Map.
+	 */
 	public static Map removableWords(String text) {
 		text = text.toLowerCase();
 		String[] tokens = text.replaceAll("[^A-Za-z \\s]","").split(" ");
 		Map <String, Integer> map = new HashMap<>();
-		for (int i = 0; i<tokens.length; i++) {
+		for (int i = 0; i < tokens.length; i++) {
 			if(!map.containsKey(tokens[i])) {
 				map.put(tokens[i], 1);
 			} else {
-				map.put(tokens[i], map.get(tokens[i])+1);
+				map.put(tokens[i], map.get(tokens[i]) + 1);
 			}
 		}
 		return map;
 	}
-	public static int compareWords(String s1, String s2) {
+	/**
+	 * compare words.
+	 *
+	 * @param      s1    The s 1
+	 * @param      s2    The s 2
+	 *
+	 * @return    int.
+	 */
+	public static int compareWords(final String s1,final String s2) {
 		float numerator = 0;
 		double denominator = 0;
 		double firstSum = 0;
