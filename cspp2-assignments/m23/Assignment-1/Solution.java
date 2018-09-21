@@ -10,7 +10,7 @@ class Text {
 		this.text2 = t2;
 	}
 	public static String TextToString(File text) {
-		String str = "";
+		String string = "";
 		try {
 			Scanner scan = new Scanner(new FileReader(text));
 			StringBuilder sbuilder = new StringBuilder();
@@ -19,11 +19,11 @@ class Text {
 				sbuilder.append(" ");
 			}
 			scan.close();
-			str= sbuilder.toString();
+			string = sbuilder.toString();
 		} catch(FileNotFoundException e) {
 			System.out.println("no file");
 		}
-		return str;
+		return string;
 	}
 	public static Map removableWords(String text) {
 		text = text.toLowerCase();
