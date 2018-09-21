@@ -61,40 +61,50 @@ class Text {
 	 * @return    int.
 	 */
 	public static int compareWords(final String s1,final String s2) {
-		float numerator = 0;
-		double denominator = 0;
+		float num = 0;
+		double den = 0;
 		double firstSum = 0;
 		double secondSum = 0;
 		Map <String, Integer> list1 = removableWords(s1);
-		Map <String, Integer> list2= removableWords(s2);
+		Map <String, Integer> list2 = removableWords(s2);
 		for (String element : list1.keySet()) {
 			for (String item :list2.keySet()) {
 				if (element.equals(item)) {
-					numerator += list1.get(element) * list2.get(item);
+					num += list1.get(element) * list2.get(item);
 				}
 			}
 		}
 		//System.out.println(numerator);
 		for (String inList1 : list1.keySet()) {
-			firstSum += Math.pow(list1.get(inList1),2);
+			firstSum += Math.pow(list1.get(inList1), 2);
 		}
 		for (String inList2 : list2.keySet()) {
-			secondSum += Math.pow(list2.get(inList2),2);
+			secondSum += Math.pow(list2.get(inList2), 2);
 		}
 		//System.out.println(firstSum);
 		//System.out.println(secondSum);
-		denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
-		double result = ((numerator / denominator) * 100D)/100D;
+		den = Math.sqrt(firstSum) * Math.sqrt(secondSum);
+		double result = ((num / den) * 100D) / 100D;
 		//System.out.println(result);
 		return (int) (result * 100);
 	}
 }
-
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	public Solution() {
 
 	}
-	public static void main(String[] args) {
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		try {
 		Scanner s = new Scanner(System.in);
 		String readFile;
@@ -105,18 +115,19 @@ class Solution {
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
-				matrix[i][j] = Text.compareWords(Text.TextToString(listOfFiles[i]),Text.TextToString(listOfFiles[j]));
+				matrix[i][j] = Text.compareWords(Text.TextToString(
+					listOfFiles[i]), Text.TextToString(listOfFiles[j]));
 			}
 		}
 		System.out.print("      \t");
-		for (int i =0; i<listOfFiles.length-1; i++) {
+		for (int i = 0; i < listOfFiles.length - 1; i++) {
 			System.out.print("\t" + listOfFiles[i].getName());
 		}
-		System.out.println("\t" + listOfFiles[length-1].getName());
-		for (int i = 0; i < length;i++) {
+		System.out.println("\t" + listOfFiles[length - 1].getName());
+		for (int i = 0; i < length; i++) {
 			System.out.print(listOfFiles[i].getName() + "\t");
-			for(int j = 0;j < length;j++) {
-				System.out.print(matrix[i][j]+"		");
+			for (int j = 0; j < length; j++) {
+				System.out.print(matrix[i][j] +"		");
 			}
 			System.out.println();
 		}
