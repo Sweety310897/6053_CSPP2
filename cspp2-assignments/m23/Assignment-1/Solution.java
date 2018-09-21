@@ -43,7 +43,6 @@ class Text {
 		double denominator = 0;
 		double firstSum = 0;
 		double secondSum = 0;
-
 		Map <String, Integer> list1 = removableWords(s1);
 		Map <String, Integer> list2= removableWords(s2);
 		for (String element : list1.keySet()) {
@@ -102,6 +101,5 @@ class Solution {
 	} catch (NoSuchElementException e) {
 		System.out.println("empty directory");
 	}
-
 	}
 }
