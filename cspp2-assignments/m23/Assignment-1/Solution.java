@@ -81,8 +81,8 @@ class Solution {
 		File[] listOfFiles = folder.listFiles();
 		int length = listOfFiles.length;
 		int[][] matrix = new int[length][length];
-		for (int i = 0; i<length; i++) {
-			for (int j = 0; j<length; j++) {
+		for (int i = 0; i < length; i++) {
+			for (int j = 0; j < length; j++) {
 				matrix[i][j] = Text.compareWords(Text.TextToString(listOfFiles[i]),Text.TextToString(listOfFiles[j]));
 			}
 		}
@@ -91,9 +91,9 @@ class Solution {
 			System.out.print("\t" + listOfFiles[i].getName());
 		}
 		System.out.println("\t" + listOfFiles[length-1].getName());
-		for (int i = 0; i<length;i++) {
+		for (int i = 0; i < length;i++) {
 			System.out.print(listOfFiles[i].getName() + "\t");
-			for(int j = 0;j<length;j++) {
+			for(int j = 0;j < length;j++) {
 				System.out.print(matrix[i][j]+"		");
 			}
 			System.out.println();
