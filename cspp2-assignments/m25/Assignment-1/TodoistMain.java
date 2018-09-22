@@ -23,7 +23,12 @@ class Task{
 		this.status = status;
 	}
 	public String toString() {
-		return this.title + " " + this.assignedTo + " " + this.timeToComplete + " " + this.important + " " + this.urgent + " " + this.status;
+		if(this.important == true && this.urgent == true) {
+			return this.title + " " + this.assignedTo + " " + this.timeToComplete + " " + this.important + " " + this.urgent + " " + this.status;
+		} else {
+			return this.title + " " + this.assignedTo + " " + this.timeToComplete + " " + this.important + " " + this.urgent + " " + this.status;
+		}
+		
 	}
 }
 /**
