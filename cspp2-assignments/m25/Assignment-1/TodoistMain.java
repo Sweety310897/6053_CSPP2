@@ -4,17 +4,31 @@ import java.util.Arrays;
 /**
   * write your code below this comment
   */
+/**
+ * Class for task.
+ */
 class Task{
-	String title;
-	String assignedTo;
-	String status;
-	int timeToComplete;
-	boolean important;
-	boolean urgent;
+	private String title;
+	private String assignedTo;
+	private String status;
+	private int timeToComplete;
+	private boolean important;
+	private boolean urgent;
 	public Task() {
-
+		//construcor.
 	}
-	public Task(String title, String assignedTo,int timeToComplete, boolean important, boolean urgent, String status) {
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      title           The title
+	 * @param      assignedTo      The assigned to
+	 * @param      timeToComplete  The time to complete
+	 * @param      important       The important
+	 * @param      urgent          The urgent
+	 * @param      status          The status
+	 */
+	public Task(String title, String assignedTo,int timeToComplete,
+		boolean important, boolean urgent, String status) {
 		this.title = title;
 		this.assignedTo = assignedTo;
 		this.timeToComplete = timeToComplete;
@@ -23,24 +37,30 @@ class Task{
 		this.status = status;
 	}
 	public String toString() {
-		if(this.important == true && this.urgent == true) {
-			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "Important" + ", " + "Urgent" + ", " + this.status;
-		} else if(this.important == true && this.urgent == false){
-			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "Important" + ", " + "Not Urgent" + ", " + this.status;
-		} else if(this.important == false && this.urgent == true) {
-			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "Not Important" + ", " + "Urgent" + ", " + this.status;	
+		if (this.important == true && this.urgent == true) {
+			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " +
+			"Important" + ", " + "Urgent" + ", " + this.status;
+		} else if (this.important == true && this.urgent == false){
+			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " +
+			"Important" + ", " + "Not Urgent" + ", " + this.status;
+		} else if (this.important == false && this.urgent == true) {
+			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " +
+			"Not Important" + ", " + "Urgent" + ", " + this.status;	
 		} else {
-			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "Not Important" + ", " + "Not Urgent" + ", " + this.status;
+			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " +
+			"Not Important" + ", " + "Not Urgent" + ", " + this.status;
 		}
-		
 	}
 }
 /**
  * Class for todoist main.
  */
 public class TodoistMain {
+	/**
+	 * Constructs the object.
+	 */
 	public TodoistMain() {
-
+		//constrcutor.
 	}
     /**
      * Starts a test.
@@ -83,7 +103,8 @@ public class TodoistMain {
      * @param      todo    The todo
      * @param      tokens  The tokens
      */
-    // public static void testAddTask(final Todoist todo, final String[] tokens) {
+    // public static void testAddTask(final Todoist todo,
+    // final String[] tokens) {
     //     try {
     //         todo.addTask(createTask(tokens));
     //     } catch (Exception e) {
@@ -115,12 +136,15 @@ public class TodoistMain {
      */
     public static Task createTask(final String[] tokens) throws Exception {
     	final int three = 3;
+    	final int four = 4;
+    	final int five = 5;
+    	final int six = 6;
         String title = tokens[1];
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[three]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        boolean important = tokens[four].equals("y");
+        boolean urgent = tokens[five].equals("y");
+        String status = tokens[six];
         return new Task(
             title, assignedTo, timeToComplete, important, urgent, status);
     }
