@@ -46,7 +46,7 @@ class Task {
      */
     Task(final String title, final String assignedTo, final int timeToComplete,
         final boolean important, final boolean urgent,
-        final String status) throws Exception {
+        final String status) {
             this.title = title;
             this.assignedTo = assignedTo;
             this.timeToComplete = timeToComplete;
@@ -192,3 +192,8 @@ public final class TodoistMain {
         startTest();
     }
 }
+
+
+
+
+
