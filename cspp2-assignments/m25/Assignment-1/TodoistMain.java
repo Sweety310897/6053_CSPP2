@@ -1,109 +1,100 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
-/**
-  * write your code below this comment
-  */
-class InvalidException extends Exception {
-	InvalidException(final String s) {
-		super(s);
-	}
-}
 /**
  * Class for task.
  */
 class Task {
-	/**
-	 * title.
-	 */
-	private String title;
-	/**
-	 * assihgnedto.
-	 */
-	private String assignedTo;
-	/**
-	 * status.
-	 */
-	private String status;
-	/**
-	 * timetocomplete.
-	 */
-	private int timeToComplete;
-	/**
-	 * imp.
-	 */
-	private boolean important;
-	/**
-	 * urgent.
-	 */
-	private boolean urgent;
-	/**
-	 * Constructs the object.
-	 */
-	public Task() {
-		//construcor.
-	}
-	/**
-	 * Constructs the object.
-	 *
-	 * @param      title           The title
-	 * @param      assignedTo      The assigned to
-	 * @param      timeToComplete  The time to complete
-	 * @param      important       The important
-	 * @param      urgent          The urgent
-	 * @param      status          The status
-	 */
-	public Task(final String title, final String assignedTo, final int timeToComplete,
-		final boolean important, final boolean urgent,
-		final String status) throws Exception {
-			this.title = title;
-			this.assignedTo = assignedTo;
-			this.timeToComplete = timeToComplete;
-			this.important = important;
-			this.urgent = urgent;
-			this.status = status;
-	}
-	/**
-	 * Returns a string representation of the object.
-	 *
-	 * @return     String representation of the object.
-	 */
-	public String toString() {
-		if (this.important == true
-			&& this.urgent == true) {
-			return this.title + ", " + this.assignedTo + ", "
-			+ this.timeToComplete + ", "
-			+ "Important" + ", " + "Urgent" + ", " + this.status;
-		} else if (this.important == true
-			&& this.urgent == false){
-			return this.title + ", " + this.assignedTo
-			+ ", "
-			+ this.timeToComplete + ", "
-			+ "Important" + ", " + "Not Urgent" + ", " + this.status;
-		} else if (this.important == false && this.urgent == true) {
-			return this.title + ", " + this.assignedTo
-			+ ", "
-			+ this.timeToComplete + ", "
-			+ "Not Important" + ", " + "Urgent" + ", "
-			+ this.status;	
-		} else {
-			return this.title + ", " + this.assignedTo + ", "
-			+ this.timeToComplete + ", "
-			+ "Not Important" + ", " + "Not Urgent" + ", "
-			+ this.status;
-		}
-	}
+    /**
+     * title.
+     */
+    private String title;
+    /**
+     * assihgnedto.
+     */
+    private String assignedTo;
+    /**
+     * status.
+     */
+    private String status;
+    /**
+     * timetocomplete.
+     */
+    private int timeToComplete;
+    /**
+     * imp.
+     */
+    private boolean important;
+    /**
+     * urgent.
+     */
+    private boolean urgent;
+    /**
+     * Constructs the object.
+     */
+    public Task() {
+        //construcor.
+    }
+    /**
+     * Constructs the object.
+     *
+     * @param      title           The title
+     * @param      assignedTo      The assigned to
+     * @param      timeToComplete  The time to complete
+     * @param      important       The important
+     * @param      urgent          The urgent
+     * @param      status          The status
+     */
+    Task(final String title, final String assignedTo, final int timeToComplete,
+        final boolean important, final boolean urgent,
+        final String status) throws Exception {
+            this.title = title;
+            this.assignedTo = assignedTo;
+            this.timeToComplete = timeToComplete;
+            this.important = important;
+            this.urgent = urgent;
+            this.status = status;
+    }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        if (this.important == true
+            && this.urgent == true) {
+            return this.title + ", " + this.assignedTo + ", "
+            + this.timeToComplete + ", "
+            + "Important" + ", " + "Urgent" + ", " + this.status;
+        } else if (this.important == true
+            && this.urgent == false) {
+            return this.title + ", " + this.assignedTo
+            + ", "
+            + this.timeToComplete + ", "
+            + "Important" + ", " + "Not Urgent" + ", " + this.status;
+        } else if (this.important == false && this.urgent == true) {
+            return this.title + ", " + this.assignedTo
+            + ", "
+            + this.timeToComplete + ", "
+            + "Not Important" + ", " + "Urgent" + ", "
+            + this.status;
+        } else {
+            return this.title + ", " + this.assignedTo + ", "
+            + this.timeToComplete + ", "
+            + "Not Important" + ", " + "Not Urgent" + ", "
+            + this.status;
+        }
+    }
 }
 /**
  * Class for todoist main.
  */
 public final class TodoistMain {
-	/**
-	 * Constructs the object.
-	 */
-	private TodoistMain() {
-		//constrcutor.
-	}
+    /**
+     * Constructs the object.
+     */
+    private TodoistMain() {
+        //constrcutor.
+    }
     /**
      * Starts a test.
      */
@@ -178,18 +169,18 @@ public final class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
-    	final int three = 3;
-    	final int four = 4;
-    	final int five = 5;
-    	final int six = 6;
-    	String title = tokens[1];
-	    String assignedTo = tokens[2];
-	    int timeToComplete = Integer.parseInt(tokens[three]);
-	    boolean important = tokens[four].equals("y");
-	    boolean urgent = tokens[five].equals("y");
-	    String status = tokens[six];
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
+        final int six = 6;
+        String title = tokens[1];
+        String assignedTo = tokens[2];
+        int timeToComplete = Integer.parseInt(tokens[three]);
+        boolean important = tokens[four].equals("y");
+        boolean urgent = tokens[five].equals("y");
+        String status = tokens[six];
         return new Task(
-        	title, assignedTo, timeToComplete, important, urgent, status);
+            title, assignedTo, timeToComplete, important, urgent, status);
     }
 
     /**
