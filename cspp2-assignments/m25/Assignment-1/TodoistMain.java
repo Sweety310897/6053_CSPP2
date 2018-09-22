@@ -28,7 +28,7 @@ class Task{
 	 * @param      status          The status
 	 */
 	public Task(String title, String assignedTo,int timeToComplete,
-		boolean important, boolean urgent, String status) {
+		boolean important, boolean urgent, String status) throws Exception{
 		try {
 			this.title = title;
 			this.assignedTo = assignedTo;
