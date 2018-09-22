@@ -12,13 +12,34 @@ class InvalidException extends Exception {
 /**
  * Class for task.
  */
-class Task{
+class Task {
+	/**
+	 * title.
+	 */
 	private String title;
+	/**
+	 * assihgnedto.
+	 */
 	private String assignedTo;
+	/**
+	 * status.
+	 */
 	private String status;
+	/**
+	 * timetocomplete.
+	 */
 	private int timeToComplete;
+	/**
+	 * imp.
+	 */
 	private boolean important;
+	/**
+	 * urgent.
+	 */
 	private boolean urgent;
+	/**
+	 * Constructs the object.
+	 */
 	public Task() {
 		//construcor.
 	}
