@@ -33,7 +33,7 @@ class Task{
 	 * @param      status          The status
 	 */
 	public Task(String title, String assignedTo,int timeToComplete,
-		boolean important, boolean urgent, String status) {
+		boolean important, boolean urgent, String status) throws Exception {
 			this.title = title;
 			this.assignedTo = assignedTo;
 			this.timeToComplete = timeToComplete;
@@ -41,7 +41,7 @@ class Task{
 			this.urgent = urgent;
 			this.status = status;
 			if(status != "todo" || status != "done") {
-	    		System.out.println( "Invalid status dud");
+	    		throw new Exception( "Invalid status dud");
 	    	}
 			
 		
