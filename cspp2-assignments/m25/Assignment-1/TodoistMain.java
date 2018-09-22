@@ -42,7 +42,9 @@ class Task{
 			this.status = status;
 	}
 	public String toString() {
-		
+		if (this.status != "done" || this.status != "true") {
+			return "Invalid status dud";
+		}
 		if (this.important == true && this.urgent == true) {
 			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " +
 			"Important" + ", " + "Urgent" + ", " + this.status;
@@ -56,6 +58,11 @@ class Task{
 			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " +
 			"Not Important" + ", " + "Not Urgent" + ", " + this.status;
 		}
+	}
+}
+class Todoist {
+	public Todoist(){
+
 	}
 }
 /**
