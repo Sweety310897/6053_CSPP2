@@ -40,7 +40,7 @@ class Task{
 			this.important = important;
 			this.urgent = urgent;
 			this.status = status;
-			if(this.status != "done") {
+			if(this.status != "done" || this.status != "todo") {
 				throw new Exception("Invalid status dud");
 			}
 			if(this.timeToComplete < 0) {
