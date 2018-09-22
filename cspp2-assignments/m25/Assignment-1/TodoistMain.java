@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 /**
  * Class for task.
  */
@@ -31,7 +30,7 @@ class Task {
     /**
      * Constructs the object.
      */
-    public Task() {
+    Task() {
         //construcor.
     }
     /**
