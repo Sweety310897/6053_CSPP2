@@ -4,11 +4,11 @@ import java.util.Arrays;
 /**
   * write your code below this comment
   */
-// class InvalidException extends Exception {
-// 	InvalidException(final String s) {
-// 		super(s);
-// 	}
-// }
+class InvalidException extends Exception {
+	InvalidException(final String s) {
+		super(s);
+	}
+}
 /**
  * Class for task.
  */
@@ -78,6 +78,7 @@ public class TodoistMain {
         Scanner s = new Scanner(System.in);
         while (s.hasNext()) {
             String[] tokens = s.nextLine().split(",");
+            //System.out.println(Arrays.toString(tokens));
             switch (tokens[0]) {
                 case "task":
                     testTask(tokens);
@@ -147,14 +148,14 @@ public class TodoistMain {
     	final int four = 4;
     	final int five = 5;
     	final int six = 6;
-        String title = tokens[1];
-        String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[three]);
-        boolean important = tokens[four].equals("y");
-        boolean urgent = tokens[five].equals("y");
-        String status = tokens[six];
+    	String title = tokens[1];
+	    String assignedTo = tokens[2];
+	    int timeToComplete = Integer.parseInt(tokens[three]);
+	    boolean important = tokens[four].equals("y");
+	    boolean urgent = tokens[five].equals("y");
+	    String status = tokens[six];
         return new Task(
-            title, assignedTo, timeToComplete, important, urgent, status);
+        	title, assignedTo, timeToComplete, important, urgent, status);
     }
 
     /**
