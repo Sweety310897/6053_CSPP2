@@ -40,7 +40,7 @@ class Task{
 			this.important = important;
 			this.urgent = urgent;
 			this.status = status;
-			if(title == " ") {
+			if(this.title == " ") {
 				System.out.println("Title not provided");
 			}
 		
