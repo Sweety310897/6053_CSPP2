@@ -24,9 +24,13 @@ class Task{
 	}
 	public String toString() {
 		if(this.important == true && this.urgent == true) {
-			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "important" + ", " + "urgent" + ", " + this.status;
+			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "Important" + ", " + "Urgent" + ", " + this.status;
+		} else if(this.important == true && this.urgent == false){
+			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "Important" + ", " + "Not Urgent" + ", " + this.status;
+		} else if(this.important == false && this.urgent == true) {
+			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "Not Important" + ", " + "Urgent" + ", " + this.status;	
 		} else {
-			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "important" + ", " + "urgent" + ", " + this.status;
+			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "Not Important" + ", " + "Not Urgent" + ", " + this.status;
 		}
 		
 	}
