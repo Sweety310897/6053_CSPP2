@@ -33,19 +33,13 @@ class Task{
 	 * @param      status          The status
 	 */
 	public Task(String title, String assignedTo,int timeToComplete,
-		boolean important, boolean urgent, String status) throws Exception {
+		boolean important, boolean urgent, String status) {
 			this.title = title;
 			this.assignedTo = assignedTo;
 			this.timeToComplete = timeToComplete;
 			this.important = important;
 			this.urgent = urgent;
 			this.status = status;
-			if(this.status != "done" || this.status != "todo") {
-				throw new Exception("Invalid status dud");
-			}
-			if(this.timeToComplete < 0) {
-				throw new Exception("Invalid timeToComplete -1");
-			}
 			
 		
 	}
@@ -154,21 +148,17 @@ public class TodoistMain {
     	final int four = 4;
     	final int five = 5;
     	final int six = 6;
-    	try {
-    		String title = tokens[1];
+    	String title = tokens[1];
 	    String assignedTo = tokens[2];
 	    int timeToComplete = Integer.parseInt(tokens[three]);
 	    boolean important = tokens[four].equals("y");
 	    boolean urgent = tokens[five].equals("y");
 	    String status = tokens[six];
+	    if(status != "done" || status != "todo") {
+	    	throw new Exception("invalid status dud");
+	    }
         return new Task(
-        	title, assignedTo, timeToComplete, important, urgent, status);	
-    	}catch(Exception e) {
-    		System.out.println(e.getMessage());
-    	}
-    	return null;
-
-    	
+        	title, assignedTo, timeToComplete, important, urgent, status);
     }
 
     /**
