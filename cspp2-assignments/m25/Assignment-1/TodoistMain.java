@@ -32,8 +32,9 @@ class Task{
 	 * @param      urgent          The urgent
 	 * @param      status          The status
 	 */
-	public Task(String title, String assignedTo,int timeToComplete,
-		boolean important, boolean urgent, String status) throws Exception {
+	public Task(final String title, final String assignedTo, final int timeToComplete,
+		final boolean important, final boolean urgent,
+		final String status) throws Exception {
 			this.title = title;
 			this.assignedTo = assignedTo;
 			this.timeToComplete = timeToComplete;
@@ -47,22 +48,28 @@ class Task{
 	 * @return     String representation of the object.
 	 */
 	public String toString() {
-		if (this.important == true && this.urgent == true) {
+		if (this.important == true
+			&& this.urgent == true) {
 			return this.title + ", " + this.assignedTo + ", "
 			+ this.timeToComplete + ", "
 			+ "Important" + ", " + "Urgent" + ", " + this.status;
-		} else if (this.important == true && this.urgent == false){
-			return this.title + ", " + this.assignedTo + ", "
+		} else if (this.important == true
+			&& this.urgent == false){
+			return this.title + ", " + this.assignedTo
+			+ ", "
 			+ this.timeToComplete + ", "
 			+ "Important" + ", " + "Not Urgent" + ", " + this.status;
 		} else if (this.important == false && this.urgent == true) {
-			return this.title + ", " + this.assignedTo + ", "
+			return this.title + ", " + this.assignedTo
+			+ ", "
 			+ this.timeToComplete + ", "
-			+ "Not Important" + ", " + "Urgent" + ", " + this.status;	
+			+ "Not Important" + ", " + "Urgent" + ", "
+			+ this.status;	
 		} else {
 			return this.title + ", " + this.assignedTo + ", "
 			+ this.timeToComplete + ", "
-			+ "Not Important" + ", " + "Not Urgent" + ", " + this.status;
+			+ "Not Important" + ", " + "Not Urgent" + ", "
+			+ this.status;
 		}
 	}
 }
