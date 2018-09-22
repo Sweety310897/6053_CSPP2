@@ -40,12 +40,11 @@ class Task{
 			this.important = important;
 			this.urgent = urgent;
 			this.status = status;
-			if(this.title == " ") {
-				System.out.println("Title not provided");
-			}
+			
 		
 	}
 	public String toString() {
+		
 		if (this.important == true && this.urgent == true) {
 			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " +
 			"Important" + ", " + "Urgent" + ", " + this.status;
