@@ -29,12 +29,17 @@ class Task{
 	 */
 	public Task(String title, String assignedTo,int timeToComplete,
 		boolean important, boolean urgent, String status) {
-		this.title = title;
-		this.assignedTo = assignedTo;
-		this.timeToComplete = timeToComplete;
-		this.important = important;
-		this.urgent = urgent;
-		this.status = status;
+		try {
+			this.title = title;
+			this.assignedTo = assignedTo;
+			this.timeToComplete = timeToComplete;
+			this.important = important;
+			this.urgent = urgent;
+			this.status = status;
+		}catch(Exception e) {
+			System.out.println("title should not be empty");
+		}
+		
 	}
 	public String toString() {
 		if (this.important == true && this.urgent == true) {
