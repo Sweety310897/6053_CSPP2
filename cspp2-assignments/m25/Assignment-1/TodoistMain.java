@@ -24,9 +24,9 @@ class Task{
 	}
 	public String toString() {
 		if(this.important == true && this.urgent == true) {
-			return this.title + " " + this.assignedTo + " " + this.timeToComplete + " " + this.important + " " + this.urgent + " " + this.status;
+			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "important" + ", " + "urgent" + ", " + this.status;
 		} else {
-			return this.title + " " + this.assignedTo + " " + this.timeToComplete + " " + this.important + " " + this.urgent + " " + this.status;
+			return this.title + ", " + this.assignedTo + ", " + this.timeToComplete + ", " + "important" + ", " + "urgent" + ", " + this.status;
 		}
 		
 	}
