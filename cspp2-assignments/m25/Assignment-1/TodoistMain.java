@@ -154,14 +154,21 @@ public class TodoistMain {
     	final int four = 4;
     	final int five = 5;
     	final int six = 6;
-    	String title = tokens[1];
+    	try {
+    		String title = tokens[1];
 	    String assignedTo = tokens[2];
 	    int timeToComplete = Integer.parseInt(tokens[three]);
 	    boolean important = tokens[four].equals("y");
 	    boolean urgent = tokens[five].equals("y");
 	    String status = tokens[six];
         return new Task(
-        	title, assignedTo, timeToComplete, important, urgent, status);
+        	title, assignedTo, timeToComplete, important, urgent, status);	
+    	}catch(Exception e) {
+    		System.out.println(e.getMessage());
+    	}
+    	return null;
+
+    	
     }
 
     /**
