@@ -40,11 +40,6 @@ class Task{
 			this.important = important;
 			this.urgent = urgent;
 			this.status = status;
-			if(status != "todo" || status != "done") {
-	    		throw new Exception( "Invalid status dud");
-	    	}
-			
-		
 	}
 	public String toString() {
 		
