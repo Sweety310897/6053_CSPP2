@@ -4,6 +4,11 @@ import java.util.Arrays;
 /**
   * write your code below this comment
   */
+// class InvalidException extends Exception {
+// 	InvalidException(final String s) {
+// 		super(s);
+// 	}
+// }
 /**
  * Class for task.
  */
@@ -28,17 +33,16 @@ class Task{
 	 * @param      status          The status
 	 */
 	public Task(String title, String assignedTo,int timeToComplete,
-		boolean important, boolean urgent, String status) throws Exception{
-		try {
+		boolean important, boolean urgent, String status) {
 			this.title = title;
 			this.assignedTo = assignedTo;
 			this.timeToComplete = timeToComplete;
 			this.important = important;
 			this.urgent = urgent;
 			this.status = status;
-		}catch(Exception e) {
-			System.out.println("title should not be empty");
-		}
+			if(title == " ") {
+				System.out.println("Title not provided");
+			}
 		
 	}
 	public String toString() {
