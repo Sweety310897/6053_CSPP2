@@ -41,41 +41,35 @@ class Task{
 			this.urgent = urgent;
 			this.status = status;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		if (this.important == true && this.urgent == true) {
-			return this.title + ", " + this.assignedTo + ", " +
-			this.timeToComplete + ", " +
-			"Important" + ", " + "Urgent" + ", " + this.status;
+			return this.title + ", " + this.assignedTo + ", "
+			+ this.timeToComplete + ", "
+			+ "Important" + ", " + "Urgent" + ", " + this.status;
 		} else if (this.important == true && this.urgent == false){
-			return this.title + ", " + this.assignedTo + ", " +
-			this.timeToComplete + ", " +
-			"Important" + ", " + "Not Urgent" + ", " + this.status;
+			return this.title + ", " + this.assignedTo + ", "
+			+ this.timeToComplete + ", "
+			+ "Important" + ", " + "Not Urgent" + ", " + this.status;
 		} else if (this.important == false && this.urgent == true) {
-			return this.title + ", " + this.assignedTo + ", " +
-			this.timeToComplete + ", " +
-			"Not Important" + ", " + "Urgent" + ", " + this.status;	
+			return this.title + ", " + this.assignedTo + ", "
+			+ this.timeToComplete + ", "
+			+ "Not Important" + ", " + "Urgent" + ", " + this.status;	
 		} else {
-			return this.title + ", " + this.assignedTo + ", " +
-			this.timeToComplete + ", " +
-			"Not Important" + ", " + "Not Urgent" + ", " + this.status;
+			return this.title + ", " + this.assignedTo + ", "
+			+ this.timeToComplete + ", "
+			+ "Not Important" + ", " + "Not Urgent" + ", " + this.status;
 		}
-	}
-}
-/**
- * Class for todoist.
- */
-class Todoist {
-	/**
-	 * Constructs the object.
-	 */
-	private Todoist() {
-		//constrcutor.
 	}
 }
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+public final class TodoistMain {
 	/**
 	 * Constructs the object.
 	 */
