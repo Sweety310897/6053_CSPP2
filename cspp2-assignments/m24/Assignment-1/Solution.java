@@ -111,13 +111,14 @@ public final class Solution {
         File input = new File(sc.next());
         File[] listoffiles = input.listFiles();
         int maximum = 0;
+        final int hundered = 100;
         String result1 = "";
         int length = listoffiles.length;
         int[][] result = new int[length][length];
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < length; j++) {
                 if (i == j) {
-                    result[i][j] = 100;
+                    result[i][j] = hundered;
                 } else {
                 result[i][j] = Frequency.similarity(
                     Frequency.toString(
