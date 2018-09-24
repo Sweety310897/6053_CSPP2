@@ -92,10 +92,13 @@ class Frequency {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Solution.
      */
+    private Solution() {
+        //constructor.
+    }
     /**
      * main function.
      *
