@@ -144,7 +144,7 @@ public final class Solution {
             System.out.println();
         }
         System.out.println(result1);
-    }catch (NoSuchElementException e) {
+    } catch (NoSuchElementException e) {
         System.out.println("empty directory");
     }
     }
