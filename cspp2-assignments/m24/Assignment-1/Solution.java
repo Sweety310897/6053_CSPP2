@@ -67,6 +67,7 @@ class Frequency {
         double numerator = 0;
         double sum1 = 0;
         double sum2 = 0;
+        final double hun = 100;
         Map<String, Integer> mapOne = removeAll(doc1);
         Map<String, Integer> mapTwo = removeAll(doc2);
         for (String element1:mapOne.keySet()) {
@@ -84,7 +85,7 @@ class Frequency {
             sum2 += Math.pow(mapTwo.get(element2), 2);
         }
         double denominator = Math.sqrt(sum1) * Math.sqrt(sum2);
-        return (int) ((((numerator / denominator) * 100D) / 100D) * 100);
+        return (int) ((((numerator / denominator) * hun) / hun) * hun);
 
 
     }
