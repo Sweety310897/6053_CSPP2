@@ -1,6 +1,15 @@
-import java.util.*;
-import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+//import java.util.Iterator;
+//import java.util.Set;
 import java.util.Scanner;
+import java.io.IOException;
+//import java.nio.file.Files;
+//import java.nio.file.Paths;
+import java.io.File;
+import java.io.FileNotFoundException;
+//import java.util.List;
+import java.io.FileReader;
 /**
  * Class for frequency.
  */
@@ -146,7 +155,7 @@ public final class Solution {
             System.out.println();
         }
         System.out.println(result1);
-    } catch (NoSuchElementException e) {
+    } catch (Exception e) {
         System.out.println("empty directory");
     }
     }
