@@ -3,7 +3,6 @@ import java.util.Map;
 //import java.util.Iterator;
 //import java.util.Set;
 import java.util.Scanner;
-import java.io.IOException;
 //import java.nio.file.Files;
 //import java.nio.file.Paths;
 import java.io.File;
@@ -17,7 +16,7 @@ class Frequency {
     /**
      * Constructs the object.
      */
-    Frequency() {
+    protected Frequency() {
         //constructor.
     }
     /**
